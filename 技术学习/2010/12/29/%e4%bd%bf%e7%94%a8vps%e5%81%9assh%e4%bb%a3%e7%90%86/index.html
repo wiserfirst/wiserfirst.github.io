@@ -1,0 +1,131 @@
+<html>
+  <head>
+    <meta content='使用VPS做SSH代理 - Peaceful Revolution' property='og:title' />
+    <title>使用VPS做SSH代理 - Peaceful Revolution</title>
+    <link href='/images/fav.png' rel='shortcut icon'>
+<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css' />
+<link href='/stylesheets/style.css' rel='stylesheet' type='text/css' />
+<link href='/stylesheets/syntax.css' rel='stylesheet' type='text/css' />
+<link href='/stylesheets/responsive.css' rel='stylesheet' type='text/css' />
+<!-- - -->
+<script src='/javascripts/jquery.js' type='text/javascript'></script>
+<script src='/javascripts/pd.js' type='text/javascript'></script>
+<script src='/javascripts/basics.js' type='text/javascript'></script>
+<script type="text/javascript" src="https://www.google.com/jsapi"></script>
+<!-- - -->
+<meta content='width=device-width, initial-scale=1.0, user-scalable=no' name='viewport'>
+<meta content='text/html; charset=utf-8' http-equiv='content-type' />
+<meta content="http://muan.co/images/og.png" property="og:image" />
+<meta content="" property="fb:app_id" />
+
+  <meta content='http://www.wiserfirst.com/%E6%8A%80%E6%9C%AF%E5%AD%A6%E4%B9%A0/2010/12/29/%25e4%25bd%25bf%25e7%2594%25a8vps%25e5%2581%259assh%25e4%25bb%25a3%25e7%2590%2586/' property='og:url' />
+  <meta content="首先登录到VPS并切换到root帐号（也可以使用sudo命令），然后使用如下命令建立新帐户，专门用于SSH代理：useradd -M -s /sbin/nologin -n username然后为该用户设置密码:passwd user..." property='og:description' />
+  <meta content="article" property="og:type" />
+
+<!-- - -->
+<script type='text/javascript'>
+  //<![CDATA[
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', '']);
+    _gaq.push(['_trackPageview']);
+    
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  //]]>
+</script>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_GB/all.js#xfbml=1&appId=604714799556697";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+  </head>
+  <body>
+    <header>
+<a id="go-back-home" href="/"><img src="/images/scribble.png" alt="scribble" width="53" height="59"></a>
+<p>Peaceful Revolution</p>
+</header>
+    <div id='container'>
+      <div class="block">
+  
+    <a target="_top" class="main" href="/">Home</a>
+  
+    <a target="_top" class="main" href="/about">About</a>
+  
+    <a target="_blank" class="main" href="https://www.linkedin.com/pub/qing-wu/30/634/8a4">LinkedIn</a>
+  
+    <a target="_blank" class="main" href="mailto:wiserfirst@gmail.com">Email</a>
+  
+    <a target="_blank" class="main" href="https://github.com/wiserfirst">GitHub</a>
+  
+</div>
+      <section class="paging">
+  
+    <div class="left">
+      <a href="/%E6%8A%80%E6%9C%AF%E5%AD%A6%E4%B9%A0/2010/12/23/wordpress%25e7%2594%25a8%25e6%2588%25b7%25e5%25af%2586%25e7%25a0%2581%25e4%25bf%25ae%25e6%2594%25b9/">
+        ‹
+      </a>
+    </div>
+  
+  
+    <div class="right">
+      <a href="/thinking/2011/03/18/%25e6%2596%2587%25e8%2589%25ba%25e9%259d%2592%25e5%25b9%25b4%25e6%2594%25b9%25e5%258f%2598%25e4%25b8%2596%25e7%2595%258c/">
+        ›
+      </a>
+    </div>
+  
+</section>
+      <div class="content">
+        <section class='post'>
+          <h1 class="upcase">
+            <div class='date'>29 Dec 2010</div>
+            使用VPS做SSH代理
+          </h1>
+          <p>首先登录到VPS并切换到root帐号（也可以使用sudo命令），然后使用如下命令建立新帐户，专门用于SSH代理：</p>
+
+<blockquote><p>useradd -M -s /sbin/nologin -n username</p></blockquote>
+<p>然后为该用户设置密码:</p>
+<blockquote><p>passwd username</p></blockquote>
+<p>接着根据提示输入两遍这个用户的密码即可。（参考了这篇文章《<a href="http://www.zhukun.net/archives/4504">在VPS上建立最低权限的SSH帐号用于代理服务</a>》）<br />
+若要删除这个用户，运行如下命令:</p>
+<blockquote><p>userdel username</p></blockquote>
+<p>为了保证用户名和密码的安全性，我使用了一个国外网站上的在线工具生成随机字符串作为用户名和密码，地址在<a href="http://www.pctools.com/guides/password/?length=12&amp;phonetic=on&amp;alpha=on&amp;mixedcase=on&amp;numeric=on&amp;punctuation=on&amp;nosimilar=on&amp;quantity=1&amp;generate=true#password_generator">这里</a>。可以指定包含字符的类别和串的长度，个人认为挺好用的，回头有时间自己写一个。<br />
+密码设好以后，Server配置就完成了，接下来做Client配置。在Windows下可以使用Bitvise Tunnelier，点<a href="http://dl.bitvise.com/Tunnelier-Inst.exe">这里下载</a>，其配置实用参考了<a href="http://www.vpsmm.com/edu/ssh-sockt-5-fuck-g-f-w.html">这篇文章</a>。<br />
+下载安装Tunnelier软件后，首先在Login页面中输入VPS地址及其SSH端口，以及刚刚设置的用户名和密码。在Options页面的On Login下取消选中Open Terminal和Open SFTP，这样使用这个帐户登录时就不会自动打开Terminal和SFTP窗口。其实这里即使不取消也是登录不上去的，因为这个帐户权限不够。最后在Service页面选中SOCKS/HTTP Proxy Forwarding下面的Enable，并在Listen Port中设置一个你想使用的端口号，如4567。这样本地代理的配置就完成了。<br />
+想要通过这个代理上网只需要在浏览器中，设置代理地址为127.0.0.1:4567即可。当然如果你使用Firefox并且安装了Autoproxy插件，还可以根据网址无缝切换翻墙与否，十分方便。只需在Autoproxy插件的配置中将SSH -D方式后面的端口号改为4567，并选择使用SSH -D即可。关于详细的设置请自行Google之。</p>
+
+
+
+        </section>
+      </div>
+      
+
+      
+      <div class="block">
+  
+    <a target="_top" class="main" href="/">Home</a>
+  
+    <a target="_top" class="main" href="/about">About</a>
+  
+    <a target="_blank" class="main" href="https://www.linkedin.com/pub/qing-wu/30/634/8a4">LinkedIn</a>
+  
+    <a target="_blank" class="main" href="mailto:wiserfirst@gmail.com">Email</a>
+  
+    <a target="_blank" class="main" href="https://github.com/wiserfirst">GitHub</a>
+  
+</div>
+    </div>
+    <footer>
+  <span class="muted">built with <a href="https://github.com/jekyll/jekyll">Jekyll</a> using <a href="https://github.com/muan/scribble">Scribble theme</a></span>
+  <br />
+  <br />
+  <img src="/images/scribble2.png" alt="scribble" /> 
+</footer>
+
+  </body>
+</html>
