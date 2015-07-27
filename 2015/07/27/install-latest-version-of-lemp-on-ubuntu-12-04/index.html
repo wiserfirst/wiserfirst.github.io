@@ -1,7 +1,7 @@
 <html>
   <head>
-    <meta content='文艺青年改变世界? - Peaceful Revolution' property='og:title' />
-    <title>文艺青年改变世界? - Peaceful Revolution</title>
+    <meta content='install latest version of Linux, nginx, MySQL and PHP (LEMP) on Ubuntu 12.04 - Peaceful Revolution' property='og:title' />
+    <title>install latest version of Linux, nginx, MySQL and PHP (LEMP) on Ubuntu 12.04 - Peaceful Revolution</title>
     <link href='/images/fav.png' rel='shortcut icon'>
 <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css' />
 <link href='/stylesheets/style.css' rel='stylesheet' type='text/css' />
@@ -18,8 +18,8 @@
 <meta content="http://muan.co/images/og.png" property="og:image" />
 <meta content="" property="fb:app_id" />
 
-  <meta content='http://www.wiserfirst.com/thinking/2011/03/18/%25e6%2596%2587%25e8%2589%25ba%25e9%259d%2592%25e5%25b9%25b4%25e6%2594%25b9%25e5%258f%2598%25e4%25b8%2596%25e7%2595%258c/' property='og:url' />
-  <meta content="在豆瓣看到一篇雄文《文艺青年改变世界》(不知何时原文已被删除)。文中举了扎坎伯格、比尔盖茨、Google创始人等的例子来证明“只会编程的人”不可能改变世界，我认为这个层面证明的还比较清楚；然而文末的结论却有些莫名其妙——“文艺青年改变..." property='og:description' />
+  <meta content='http://www.wiserfirst.com/2015/07/27/install-latest-version-of-lemp-on-ubuntu-12-04/' property='og:url' />
+  <meta content="Installing the LEMP stack on Ubuntu is pretty simple, you can follow a step-by-step guide like [this one](https://www..." property='og:description' />
   <meta content="article" property="og:type" />
 
 <!-- - -->
@@ -67,31 +67,40 @@
       <section class="paging">
   
     <div class="left">
-      <a href="/%E6%8A%80%E6%9C%AF%E5%AD%A6%E4%B9%A0/2010/12/29/%25e4%25bd%25bf%25e7%2594%25a8vps%25e5%2581%259assh%25e4%25bb%25a3%25e7%2590%2586/">
+      <a href="/2015/07/26/how-to-stop-photos-opening-automatically-when-iphone-connects/">
         ‹
       </a>
     </div>
   
   
-    <div class="right">
-      <a href="/2011/09/05/update-google-contacts-via-api/">
-        ›
-      </a>
-    </div>
-  
 </section>
       <div class="content">
         <section class='post'>
           <h1 class="upcase">
-            <div class='date'>18 Mar 2011</div>
-            文艺青年改变世界?
+            <div class='date'>27 Jul 2015</div>
+            install latest version of Linux, nginx, MySQL and PHP (LEMP) on Ubuntu 12.04
           </h1>
-          <p>在豆瓣看到一篇雄文《文艺青年改变世界》(不知何时原文已被删除)。文中举了扎坎伯格、比尔盖茨、Google创始人等的例子来证明“只会编程的人”不可能改变世界，我认为这个层面证明的还比较清楚；然而文末的结论却有些莫名其妙——“文艺青年改变世界”。<br />
+          <p>Installing the LEMP stack on Ubuntu is pretty simple, you can follow a step-by-step guide like <a href="https://www.digitalocean.com/community/tutorials/how-to-install-linux-nginx-mysql-php-lemp-stack-on-ubuntu-12-04">this one</a>. But as of July 2015, the versions of nginx and PHP are 1.1.19 and 5.3.10 respectively, both of which are pretty old. If you want the latest version of nginx and PHP, there are a few extra steps to take.</p>
 
-经常有搞技术的会忽视技术以外的修养，而认为“只懂编程就够了”。这当然是不对的，作者在文中也通过举例说明了那些改变了世界的人除了编程技术过硬之外都有很好的技术以外的修养，比如古典语言、绘画等等；作者明显倾向于是这些技术以外的修养才使他们有了“远见卓识”，从而能够对世界有一些影响、有一些推动。那么能否就因此将扎坎伯格等人就称为“文艺青年”呢？我想不光是懂文艺的Hacker们，连那些真正只懂文艺的文艺青年也该出来抗议了。连作者自己都承认“编程是必备能力，是创造一件东西需要的基本能力”，那如何能得出“文艺青年改变世界”这么个结论？假如结论是想要通过技术改变世界，除了编程还要懂“写作、绘画、古希腊语”等文艺方面的东西，我想不会有多少人反对。<br />
-作者的逻辑似乎是这样的：<br />
-很多成功的Hacker都有很高的文艺素养=&gt;只懂编程不够=&gt;文艺足以改变世界。恩，好吧——“文艺青年改变世界”。<br />
-好吧，我坦白，我不是文艺青年，我写作水平很烂的。我还是不试图改变世界了^_^</p>
+<p>First of all you need to install python-software-properties package, in order to add ppa later:</p>
+
+<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nv">$ </span>sudo apt-get -y install python-software-properties</code></pre></div>
+
+<p>Next add ppa for nginx and install the latest version:</p>
+
+<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nv">$ </span>sudo add-apt-repository ppa:nginx/stable
+<span class="nv">$ </span>sudo apt-get update
+<span class="nv">$ </span>sudo apt-get install nginx</code></pre></div>
+
+<p>Then add ppa for PHP5.6 and install the latest version:</p>
+
+<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nv">$ </span>sudo add-apt-repository ppa:ondrej/php5-5.6
+<span class="nv">$ </span>sudo apt-get update
+<span class="nv">$ </span>sudo apt-get remove php-pear php5-fpm php5-cgi php5-cli php5-common php5-curl php5-dev php5-gd php5-mcrypt php5-mysql libssh2-php
+<span class="nv">$ </span>sudo apt-get install php5-fpm php5-mysql php5-gd php5-mcrypt php5-curl php5-dev php-pear libssh2-1-dev libssh2-php php5-redis
+<span class="nv">$ </span>sudo apt-get autoremove</code></pre></div>
+
+<p>Notice that you need to remove old php 5.3 related packages first before installing the new php packages for PHP 5.6, otherwiser you might get into trouble like apt couldn&rsquo;t resolve dependencies.</p>
 
 
 
