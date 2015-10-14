@@ -1,0 +1,161 @@
+<html>
+  <head>
+    <meta content='understanding the use statement in elixir with example - Peaceful Revolution' property='og:title' />
+    <title>understanding the use statement in elixir with example - Peaceful Revolution</title>
+    <link href='/images/fav.png' rel='shortcut icon'>
+<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css' />
+<link href='/stylesheets/style.css' rel='stylesheet' type='text/css' />
+<link href='/stylesheets/syntax.css' rel='stylesheet' type='text/css' />
+<link href='/stylesheets/responsive.css' rel='stylesheet' type='text/css' />
+<!-- - -->
+<script src='/javascripts/jquery.js' type='text/javascript'></script>
+<script src='/javascripts/pd.js' type='text/javascript'></script>
+<script src='/javascripts/basics.js' type='text/javascript'></script>
+<script type="text/javascript" src="https://www.google.com/jsapi"></script>
+<!-- - -->
+<meta content='width=device-width, initial-scale=1.0, user-scalable=no' name='viewport'>
+<meta content='text/html; charset=utf-8' http-equiv='content-type' />
+<meta content="http://muan.co/images/og.png" property="og:image" />
+<meta content="" property="fb:app_id" />
+
+  <meta content='http://www.wiserfirst.com/2015/10/14/understanding-the-use-statement-in-elixir-with-example/' property='og:url' />
+  <meta content="When you `use` a module in Elixir, the `__using__/1` macro of that module is called.In the Hello example app from [Ph..." property='og:description' />
+  <meta content="article" property="og:type" />
+
+<!-- - -->
+<script type='text/javascript'>
+  //<![CDATA[
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', '']);
+    _gaq.push(['_trackPageview']);
+    
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  //]]>
+</script>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_GB/all.js#xfbml=1&appId=604714799556697";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+  </head>
+  <body>
+    <header>
+<a id="go-back-home" href="/"><img src="/images/scribble.png" alt="scribble" width="53" height="59"></a>
+<p>Peaceful Revolution</p>
+</header>
+    <div id='container'>
+      <div class="block">
+  
+    <a target="_top" class="main" href="/">Home</a>
+  
+    <a target="_top" class="main" href="/about">About</a>
+  
+    <a target="_blank" class="main" href="https://www.linkedin.com/pub/qing-wu/30/634/8a4">LinkedIn</a>
+  
+    <a target="_blank" class="main" href="mailto:wiserfirst@gmail.com">Email</a>
+  
+    <a target="_blank" class="main" href="https://github.com/wiserfirst">GitHub</a>
+  
+</div>
+      <section class="paging">
+  
+    <div class="left">
+      <a href="/2015/09/25/running-postgresql-on-osx/">
+        ‹
+      </a>
+    </div>
+  
+  
+</section>
+      <div class="content">
+        <section class='post'>
+          <h1 class="upcase">
+            <div class='date'>14 Oct 2015</div>
+            understanding the use statement in elixir with example
+          </h1>
+          <p>When you <code>use</code> a module in Elixir, the <code>__using__/1</code> macro of that module is called.</p>
+
+<p>In the Hello example app from <a href="http://www.phoenixframework.org/docs/up-and-running">Phoenix Guides</a>, the route is defined as a module named <code>HelloPhoenix.Router</code> in <code>web/router.ex</code>. The first line of its body looks like this:</p>
+
+<div class="highlight"><pre><code class="language-elixir" data-lang="elixir"><span class="kn">use</span> <span class="nc">HelloPhoenix.Web</span><span class="p">,</span> <span class="ss">:router</span></code></pre></div>
+
+<p>It is calling the <code>__using__/1</code> macro of <code>HelloPhoenix.Web</code> module, with a atom <code>:router</code> as the parameter. If you open <code>web/web.ex</code>, where <code>HelloPhoenix.Web</code> module is defined, you can find the macro near the bottom:</p>
+
+<div class="highlight"><pre><code class="language-elixir" data-lang="elixir"><span class="na">@doc</span> <span class="sh">&quot;&quot;&quot;</span>
+<span class="sh">When used, dispatch to the appropriate controller/view/etc.</span>
+<span class="sh">&quot;&quot;&quot;</span>
+<span class="kd">defmacro</span> <span class="n">__using__</span><span class="p">(</span><span class="n">which</span><span class="p">)</span> <span class="ow">when</span> <span class="n">is_atom</span><span class="p">(</span><span class="n">which</span><span class="p">)</span> <span class="k">do</span>
+  <span class="n">apply</span><span class="p">(</span><span class="bp">__MODULE__</span><span class="p">,</span> <span class="n">which</span><span class="p">,</span> <span class="p">[])</span>
+<span class="k">end</span></code></pre></div>
+
+<p><code>__MODULE__</code> is one of Elixir&rsquo;s read-only pseudo-variables. Similarly to Erlang&rsquo;s <code>?MODULE</code>, it expands to the current module&rsquo;s name at compile time, which in our case is <code>HelloPhoenix.Web</code>. As for the <code>apply/3</code> function, according to <a href="http://elixir-lang.org/docs/v1.0/elixir/">Elixir document</a>, it has the following signature:</p>
+
+<div class="highlight"><pre><code class="language-elixir" data-lang="elixir"><span class="n">apply</span><span class="p">(</span><span class="n">module</span><span class="p">,</span> <span class="n">fun</span><span class="p">,</span> <span class="n">args</span><span class="p">)</span></code></pre></div>
+
+<p>So in this case, the current module, an atom <code>:router</code> and an empty list are bind to the <code>module</code>, <code>fun</code> and <code>args</code> parameters respectively. What the apply function do is:</p>
+
+<blockquote>
+<p>Invokes the given fun from module with the array of arguments args.
+Inlined by the compiler.</p>
+</blockquote>
+
+<p>That means a function named router in the current module will be called with an empty list as the parameter. Let&rsquo;s look at the router function:</p>
+
+<div class="highlight"><pre><code class="language-elixir" data-lang="elixir"><span class="kd">def</span> <span class="n">router</span> <span class="k">do</span>
+  <span class="k">quote</span> <span class="k">do</span>
+    <span class="kn">use</span> <span class="nc">Phoenix.Router</span>
+  <span class="k">end</span>
+<span class="k">end</span></code></pre></div>
+
+<p>The code in a quote block will be turned it into its internal representation in Elixir. You can find more about quoting <a href="http://elixir-lang.org/getting-started/meta/quote-and-unquote.html">here</a>. Then we have another round of <code>use</code>, and now the <code>__using__/1</code> macro of module <code>Phoenix.Router</code> will be called with no parameter.</p>
+
+
+
+        </section>
+      </div>
+      
+
+      
+        <div class="block">
+  <div id="disqus_thread"></div>
+  <script type="text/javascript">
+      var disqus_shortname = "peacefulrevolution"; 
+      (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+      })();
+  </script>
+  <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+      
+      <div class="block">
+  
+    <a target="_top" class="main" href="/">Home</a>
+  
+    <a target="_top" class="main" href="/about">About</a>
+  
+    <a target="_blank" class="main" href="https://www.linkedin.com/pub/qing-wu/30/634/8a4">LinkedIn</a>
+  
+    <a target="_blank" class="main" href="mailto:wiserfirst@gmail.com">Email</a>
+  
+    <a target="_blank" class="main" href="https://github.com/wiserfirst">GitHub</a>
+  
+</div>
+    </div>
+    <footer>
+  <span class="muted">built with <a href="https://github.com/jekyll/jekyll">Jekyll</a> using <a href="https://github.com/muan/scribble">Scribble theme</a></span>
+  <br />
+  <br />
+  <img src="/images/scribble2.png" alt="scribble" /> 
+</footer>
+
+  </body>
+</html>
