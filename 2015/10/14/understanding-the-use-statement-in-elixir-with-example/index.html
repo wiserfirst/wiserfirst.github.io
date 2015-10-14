@@ -114,7 +114,7 @@ Inlined by the compiler.</p>
   <span class="k">end</span>
 <span class="k">end</span></code></pre></div>
 
-<p>The code in a quote block will be turned it into its internal representation in Elixir. You can find more about quoting <a href="http://elixir-lang.org/getting-started/meta/quote-and-unquote.html">here</a>. Then we have another round of <code>use</code>, and now the <code>__using__/1</code> macro of module <code>Phoenix.Router</code> will be called with no parameter.</p>
+<p>The code in a quote block will be turned it into its internal representation in Elixir. You can find more about quoting <a href="http://elixir-lang.org/getting-started/meta/quote-and-unquote.html">here</a>. Then we have another round of <code>use</code>, and now the <code>__using__/1</code> macro of module <code>Phoenix.Router</code> will be called with no parameter (which defaults to a empty list).</p>
 
 
 
