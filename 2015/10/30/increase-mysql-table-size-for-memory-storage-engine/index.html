@@ -1,7 +1,7 @@
 <html>
   <head>
-    <meta content='How to increase mysql table size for memory storage engine - Peaceful Revolution' property='og:title' />
-    <title>How to increase mysql table size for memory storage engine - Peaceful Revolution</title>
+    <meta content='How to increase MySQL table size for memory storage engine - Peaceful Revolution' property='og:title' />
+    <title>How to increase MySQL table size for memory storage engine - Peaceful Revolution</title>
     <link href='/images/fav.png' rel='shortcut icon'>
 <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css' />
 <link href='/stylesheets/style.css' rel='stylesheet' type='text/css' />
@@ -19,7 +19,7 @@
 <meta content="" property="fb:app_id" />
 
   <meta content='http://www.wiserfirst.com/2015/10/30/increase-mysql-table-size-for-memory-storage-engine/' property='og:url' />
-  <meta content="CakePHP fixture import existing 16k records, table full error.Connect to test db, table size is about 16M; whereas in..." property='og:description' />
+  <meta content="Today while trying to test a database related behavior in CakePHP, I created a fixture which imports the 16k records ..." property='og:description' />
   <meta content="article" property="og:type" />
 
 <!-- - -->
@@ -78,17 +78,17 @@
         <section class='post'>
           <h1 class="upcase">
             <div class='date'>30 Oct 2015</div>
-            How to increase mysql table size for memory storage engine
+            How to increase MySQL table size for memory storage engine
           </h1>
-          <p>CakePHP fixture import existing 16k records, table full error.</p>
+          <p>Today while trying to test a database related behavior in CakePHP, I created a fixture which imports the 16k records from a existing table. After a painful long wait, MySQL gave a table full error.</p>
 
-<p>Connect to test db, table size is about 16M; whereas in development db, with innodb engine, that table is just 1.5M. Then noticed on test db the storage engine is Memory. Google find <a href="https://dev.mysql.com/doc/refman/5.6/en/memory-storage-engine.html">The MEMORY Storage Engine</a> section in MySQL document.</p>
+<p>So I&rsquo;ve got a problem to solve. Connect to the test database, check the table size, which is 16M; but in development database, with InnoDB engine, that table is just 1.5M. Then I noticed the storage engine of the test db was Memory. After some Googling, I found the relevant section <a href="https://dev.mysql.com/doc/refman/5.6/en/memory-storage-engine.html">The MEMORY Storage Engine</a> in MySQL document.</p>
 
 <blockquote>
 <p>The maximum size of MEMORY tables is limited by the <code>max_heap_table_size</code> system variable, which has a default value of 16MB.</p>
 </blockquote>
 
-<p>That make a lot of sense. This option doesn&rsquo;t yet exist in my /etc/mysql/my.cnf. Let&rsquo;s add it to the bottom of the configuration file (I&rsquo;ve made a mistake without realising it):</p>
+<p>That makes a lot of sense. This option doesn&rsquo;t yet exist in my /etc/mysql/my.cnf. Let&rsquo;s add it to the bottom of the configuration file (I&rsquo;ve made a mistake without realising it):</p>
 
 <div class="highlight"><pre><code class="language-mysql" data-lang="mysql"><span class="n">max_heap_table_size</span><span class="o">=</span><span class="mi">128</span><span class="n">M</span></code></pre></div>
 
@@ -118,7 +118,7 @@
 <p>this will cover mysql restarts.</p>
 </blockquote>
 
-<p>OK. So I&rsquo;ve added the correct options, but to the wrong location. Those options must be added under the <code>[mysqld]</code> section in the configuration file. After moving them to the correct section in /etc/mysql/my.cnf and restarting MySQL server, my new test finally works as expected.</p>
+<p>OK. So I&rsquo;ve added the correct options, but to the wrong location. Those options must be added under the <code>[mysqld]</code> section in the configuration file. After moving them to the correct section in /etc/mysql/my.cnf and restarting MySQL server, my new test finally works as expected (but still very slow).</p>
 
 <h2>Retrospect</h2>
 
@@ -126,9 +126,9 @@
 
 <ol>
 <li>Setting up test fixture with existing records may not be the best way to do it.</li>
-<li>CakePHP use memory storage engine for its test database on MySQL</li>
-<li>The memory storage engine probably doesn&rsquo;t have compression as InnoDB, since it consumes a lot more space for the same table</li>
-<li>In MySQL configuration file, different sections control different parts of MySQL</li>
+<li>CakePHP uses memory storage engine for its test database on MySQL.</li>
+<li>The memory storage engine probably doesn&rsquo;t have compression as InnoDB does, since it consumes a lot more space for the same table.</li>
+<li>In MySQL configuration file, different sections control different parts of MySQL, which is why adding the options to the bottom wouldn&rsquo;t work.</li>
 </ol>
 
 
