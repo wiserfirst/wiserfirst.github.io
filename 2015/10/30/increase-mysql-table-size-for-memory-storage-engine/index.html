@@ -1,0 +1,176 @@
+<html>
+  <head>
+    <meta content='How to increase mysql table size for memory storage engine - Peaceful Revolution' property='og:title' />
+    <title>How to increase mysql table size for memory storage engine - Peaceful Revolution</title>
+    <link href='/images/fav.png' rel='shortcut icon'>
+<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css' />
+<link href='/stylesheets/style.css' rel='stylesheet' type='text/css' />
+<link href='/stylesheets/syntax.css' rel='stylesheet' type='text/css' />
+<link href='/stylesheets/responsive.css' rel='stylesheet' type='text/css' />
+<!-- - -->
+<script src='/javascripts/jquery.js' type='text/javascript'></script>
+<script src='/javascripts/pd.js' type='text/javascript'></script>
+<script src='/javascripts/basics.js' type='text/javascript'></script>
+<script type="text/javascript" src="https://www.google.com/jsapi"></script>
+<!-- - -->
+<meta content='width=device-width, initial-scale=1.0, user-scalable=no' name='viewport'>
+<meta content='text/html; charset=utf-8' http-equiv='content-type' />
+<meta content="http://muan.co/images/og.png" property="og:image" />
+<meta content="" property="fb:app_id" />
+
+  <meta content='http://www.wiserfirst.com/2015/10/30/increase-mysql-table-size-for-memory-storage-engine/' property='og:url' />
+  <meta content="CakePHP fixture import existing 16k records, table full error.Connect to test db, table size is about 16M; whereas in..." property='og:description' />
+  <meta content="article" property="og:type" />
+
+<!-- - -->
+<script type='text/javascript'>
+  //<![CDATA[
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', '']);
+    _gaq.push(['_trackPageview']);
+    
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  //]]>
+</script>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_GB/all.js#xfbml=1&appId=604714799556697";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+  </head>
+  <body>
+    <header>
+<a id="go-back-home" href="/"><img src="/images/scribble.png" alt="scribble" width="53" height="59"></a>
+<p>Peaceful Revolution</p>
+</header>
+    <div id='container'>
+      <div class="block">
+  
+    <a target="_top" class="main" href="/">Home</a>
+  
+    <a target="_top" class="main" href="/about">About</a>
+  
+    <a target="_blank" class="main" href="https://www.linkedin.com/pub/qing-wu/30/634/8a4">LinkedIn</a>
+  
+    <a target="_blank" class="main" href="mailto:wiserfirst@gmail.com">Email</a>
+  
+    <a target="_blank" class="main" href="https://github.com/wiserfirst">GitHub</a>
+  
+</div>
+      <section class="paging">
+  
+    <div class="left">
+      <a href="/2015/10/17/making-first-contribution-to-phoenix-framework/">
+        ‹
+      </a>
+    </div>
+  
+  
+</section>
+      <div class="content">
+        <section class='post'>
+          <h1 class="upcase">
+            <div class='date'>30 Oct 2015</div>
+            How to increase mysql table size for memory storage engine
+          </h1>
+          <p>CakePHP fixture import existing 16k records, table full error.</p>
+
+<p>Connect to test db, table size is about 16M; whereas in development db, with innodb engine, that table is just 1.5M. Then noticed on test db the storage engine is Memory. Google find <a href="https://dev.mysql.com/doc/refman/5.6/en/memory-storage-engine.html">The MEMORY Storage Engine</a> section in MySQL document.</p>
+
+<blockquote>
+<p>The maximum size of MEMORY tables is limited by the <code>max_heap_table_size</code> system variable, which has a default value of 16MB.</p>
+</blockquote>
+
+<p>That make a lot of sense. This option doesn&rsquo;t yet exist in my /etc/mysql/my.cnf. Let&rsquo;s add it to the bottom of the configuration file (I&rsquo;ve made a mistake without realising it):</p>
+
+<div class="highlight"><pre><code class="language-mysql" data-lang="mysql"><span class="n">max_heap_table_size</span><span class="o">=</span><span class="mi">128</span><span class="n">M</span></code></pre></div>
+
+<p>Restart MySQL server by running:</p>
+
+<div class="highlight"><pre><code class="language-bash" data-lang="bash">sudo service mysql restart</code></pre></div>
+
+<p>And then try again, and &hellip; still doesn&rsquo;t work. Go back to MySQL document and look again at the section for option <code>max_heap_table_size</code>:</p>
+
+<blockquote>
+<p>This variable is also used in conjunction with <code>tmp_table_size</code> to limit the size of internal in-memory tables.</p>
+</blockquote>
+
+<p>OK, let&rsquo;s add this option as well:</p>
+
+<div class="highlight"><pre><code class="language-mysql" data-lang="mysql"><span class="n">tmp_table_size</span><span class="o">=</span><span class="mi">128</span><span class="n">M</span></code></pre></div>
+
+<p>And restart MySQL and try again, and &hellip; still doesn&rsquo;t work. After some more Googling, I found <a href="http://stackoverflow.com/questions/9842720/how-to-make-the-mysql-memory-engine-store-more-data">this thread</a> on StackOverflow, which says</p>
+
+<blockquote>
+<p>Add this to /etc/my.cnf</p>
+
+<div class="highlight"><pre><code class="language-mysql" data-lang="mysql"><span class="p">[</span><span class="n">mysqld</span><span class="p">]</span>
+<span class="n">tmp_table_size</span><span class="o">=</span><span class="mi">2</span><span class="n">G</span>
+<span class="n">max_heap_table_size</span><span class="o">=</span><span class="mi">2</span><span class="n">G</span></code></pre></div>
+
+<p>this will cover mysql restarts.</p>
+</blockquote>
+
+<p>OK. So I&rsquo;ve added the correct options, but to the wrong location. Those options must be added under the <code>[mysqld]</code> section in the configuration file. After moving them to the correct section in /etc/mysql/my.cnf and restarting MySQL server, my new test finally works as expected.</p>
+
+<h2>Retrospect</h2>
+
+<p>I realised a few things, after spending an hour tackling this issue:</p>
+
+<ol>
+<li>Setting up test fixture with existing records may not be the best way to do it.</li>
+<li>CakePHP use memory storage engine for its test database on MySQL</li>
+<li>The memory storage engine probably doesn&rsquo;t have compression as InnoDB, since it consumes a lot more space for the same table</li>
+<li>In MySQL configuration file, different sections control different parts of MySQL</li>
+</ol>
+
+
+
+        </section>
+      </div>
+      
+
+      
+        <div class="block">
+  <div id="disqus_thread"></div>
+  <script type="text/javascript">
+      var disqus_shortname = "peacefulrevolution"; 
+      (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+      })();
+  </script>
+  <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+      
+      <div class="block">
+  
+    <a target="_top" class="main" href="/">Home</a>
+  
+    <a target="_top" class="main" href="/about">About</a>
+  
+    <a target="_blank" class="main" href="https://www.linkedin.com/pub/qing-wu/30/634/8a4">LinkedIn</a>
+  
+    <a target="_blank" class="main" href="mailto:wiserfirst@gmail.com">Email</a>
+  
+    <a target="_blank" class="main" href="https://github.com/wiserfirst">GitHub</a>
+  
+</div>
+    </div>
+    <footer>
+  <span class="muted">built with <a href="https://github.com/jekyll/jekyll">Jekyll</a> using <a href="https://github.com/muan/scribble">Scribble theme</a></span>
+  <br />
+  <br />
+  <img src="/images/scribble2.png" alt="scribble" /> 
+</footer>
+
+  </body>
+</html>
