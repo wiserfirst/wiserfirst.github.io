@@ -88,13 +88,14 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  jekyll
-  jekyll-feed
-  jekyll-gist
-  jekyll-include-cache
-  jekyll-seo-tag
-  jekyll-sitemap
-  minimal-mistakes-jekyll
+  jekyll (~> 4.0)
+  jekyll-feed (~> 0.15)
+  jekyll-gist (~> 1.5)
+  jekyll-include-cache (~> 0.2)
+  jekyll-paginate (~> 1.1)
+  jekyll-seo-tag (~> 2.6)
+  jekyll-sitemap (~> 1.4)
+  minimal-mistakes-jekyll (~> 4.19)
 
 BUNDLED WITH
    2.1.4

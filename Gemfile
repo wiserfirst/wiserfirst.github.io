@@ -8,16 +8,17 @@ source 'https://rubygems.org'
 #     bundle exec jekyll serve
 #
 # This will help ensure the proper Jekyll version is running.
-gem 'jekyll'
+gem 'jekyll', '~> 4.0'
 
 # the theme
 # If you have any plugins, put them here!
 group :jekyll_plugins do
-  gem 'jekyll-feed'
-  gem 'jekyll-gist'
-  gem 'jekyll-include-cache'
-  gem 'jekyll-seo-tag'
-  gem 'jekyll-sitemap'
+  gem 'jekyll-feed', '~> 0.15'
+  gem 'jekyll-gist', '~> 1.5'
+  gem 'jekyll-include-cache', '~> 0.2'
+  gem 'jekyll-paginate', '~> 1.1'
+  gem 'jekyll-seo-tag', '~> 2.6'
+  gem 'jekyll-sitemap', '~> 1.4'
 end
 
-gem 'minimal-mistakes-jekyll'
+gem 'minimal-mistakes-jekyll', '~> 4.19'
