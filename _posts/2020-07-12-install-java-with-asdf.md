@@ -1,6 +1,7 @@
 ---
 title: "Install Java with Asdf"
 date: "2019-08-03"
+tags: java asdf
 ---
 
 For some reason, I needed to install Java on my work laptop, which is a Macbook Pro. I could use Homebrew, but it would only allow me to have one version of Java, or two if you count Java11. If I ever need to run different versions of Java for different projects, it would be very cumbersome to manage, if not downright impossible. For that reason, I generally use a tool called asdf to manage the installations of programming languages.
