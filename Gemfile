@@ -25,3 +25,4 @@ group :jekyll_plugins do
 end
 
 gem 'minimal-mistakes-jekyll', '~> 4.19'
+gem 'mini_racer'
