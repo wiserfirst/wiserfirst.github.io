@@ -1,6 +1,7 @@
 ---
 title: "Understanding the Use Statement in Elixir with Examples"
 date: "2015-10-14"
+tags: elixir use
 ---
 
 When you `use` a module in Elixir, the `__using__/1` macro of that module is called.

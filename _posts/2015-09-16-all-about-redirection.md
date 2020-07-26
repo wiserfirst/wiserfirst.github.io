@@ -1,6 +1,7 @@
 ---
 title: "All about Redirection"
 date: "2015-09-16"
+tags: linux redirection
 ---
 
 There are three special file descriptors: stdin, stdout and stderr (std stands for standard), which are defined as file descriptor 0, 1 and 2. You can do different types of redirections with them.

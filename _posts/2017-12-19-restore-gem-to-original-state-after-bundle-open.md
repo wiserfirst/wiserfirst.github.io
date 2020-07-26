@@ -1,6 +1,7 @@
 ---
 title: "Restore Gem to Original State after Bundle Open"
 date: "2017-12-19"
+tags: ruby bundle gem
 ---
 
 When trying to understand how a gem works,

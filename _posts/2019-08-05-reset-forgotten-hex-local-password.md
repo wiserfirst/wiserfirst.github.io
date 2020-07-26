@@ -1,6 +1,7 @@
 ---
 title: "Reset Forgotten Hex Local Password"
 date: "2019-08-03"
+tags: hex
 ---
 
 Hex is the package manager for the Erlang ecosystem. When you first install it with `mix local.hex` and authenticate with your hex.pm account, a local password is required. It'll be used when you publish/update a package on hex.pm. Since I had never done that until a few days ago, unsurprisingly my local password was forgotten.

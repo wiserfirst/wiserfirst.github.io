@@ -1,6 +1,7 @@
 ---
 title: "Running PostgreSQL on OSX"
 date: "2015-09-25"
+tags: postgres macos
 ---
 
 If you use [Homebrew](http://brew.sh/), installing PostgreSQL (and a lot of other packages) is really easy. Just type the following command in Terminal:

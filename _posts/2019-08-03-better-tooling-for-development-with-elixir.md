@@ -1,6 +1,7 @@
 ---
 title: "Better Tooling for Development with Elixir"
 date: "2019-08-03"
+tags: elixir credo git_hooks
 ---
 
 We ❤️ Elixir, so we want to the development process as smooth as possible. Fortunately there are various tools that can help with the following:

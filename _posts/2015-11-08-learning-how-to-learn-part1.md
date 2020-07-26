@@ -1,6 +1,7 @@
 ---
 title: "Learning How to Learn Part 1"
 date: "2015-11-08"
+tags: learning
 ---
 
 Last week, I discovered a wonderful course, [Learning How to Learn](https://www.coursera.org/learn/learning-how-to-learn), from UC San Diego on Coursera. This course was taught by two prestigious scientists in neuroscience, [Barbara Oakley](https://twitter.com/barbaraoakley) and [Terrence Sejnowski](https://twitter.com/sejnowski). After following the material from the first week, I feel the urge to take some notes of my own understanding.

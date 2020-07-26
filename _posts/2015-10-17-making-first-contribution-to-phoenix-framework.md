@@ -1,6 +1,7 @@
 ---
 title: "Making My First Contribution to the Phoenix Framework"
 date: "2015-10-17"
+tags: phoenix elixir mix bootstrap
 ---
 
 To me the idea of contributing to a popular open source project, feels exciting and intimidating at the same time, since I've never done that before (except for improving the document/guides) and not sure know where to start.

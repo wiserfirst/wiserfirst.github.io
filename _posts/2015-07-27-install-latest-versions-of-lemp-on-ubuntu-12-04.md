@@ -1,6 +1,7 @@
 ---
 title: "Install Latest Versions of Linux, Nginx, MySQL and PHP (LEMP) on Ubuntu 12.04"
 date: "2015-07-27"
+tags: linux nginx mysql php ubuntu
 ---
 
 Installing the LEMP stack on Ubuntu is pretty simple, you can follow a step-by-step guide like [this one](https://www.digitalocean.com/community/tutorials/how-to-install-linux-nginx-mysql-php-lemp-stack-on-ubuntu-12-04). But as of July 2015, the versions of Nginx and PHP are 1.1.19 and 5.3.10 respectively, both of which are pretty old. If you want the latest version of Nginx and PHP, there are a few extra steps to take.

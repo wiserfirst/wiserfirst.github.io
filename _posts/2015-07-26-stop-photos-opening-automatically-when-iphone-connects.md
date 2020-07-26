@@ -1,6 +1,7 @@
 ---
 title: "Stop Photos Opening Automatically when iPhone Connects"
 date: "2015-07-26"
+tags: iPhone Photos
 ---
 
 When connecting an iPhone to your Mac, the Photos app will open automatically by default, which could sometimes be pretty annoying. So here is how to prevent that:

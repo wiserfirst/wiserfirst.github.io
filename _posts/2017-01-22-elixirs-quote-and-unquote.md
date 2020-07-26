@@ -1,6 +1,7 @@
 ---
 title: "Elixir's quote and unquote"
 date: "2017-01-22"
+tags: elixir
 ---
 
 For a very long time, I had a hard time trying to understand how macros work in Elixir. Since I don't have any Lisp background, that's a whole new concept for me.

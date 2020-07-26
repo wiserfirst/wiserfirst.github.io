@@ -1,6 +1,7 @@
 ---
 title: "How to Increase MySQL Table Size for Memory Storage Engine"
 date: "2015-10-30"
+tags: mysql
 ---
 
 Today while trying to test a database related behavior in CakePHP, I created a fixture which imports the 16k records from a existing table. After a painful long wait, MySQL gave a table full error.

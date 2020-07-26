@@ -1,6 +1,7 @@
 ---
 title: "Make a Shell Command Always Succeed"
 date: "2019-07-20"
+tags: linux bash
 ---
 
 In bash and many other shells, zero is called successful exit status code, whereas any non-zero codes are failure exit codes. That is to say when a command returns exit code of zero, it's considered successful; otherwise, it's considered a failure.

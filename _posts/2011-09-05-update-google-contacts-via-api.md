@@ -1,6 +1,7 @@
 ---
 title: "通过API更新Google账户通讯录"
 date: "2011-09-05"
+tags: google python
 ---
 
 之前用的手机是Nokia，为了保存上面的通讯录，我按照[这里](http://www.allaboutsymbian.com/news/item/8922_Google_Sync_Beta_for_SyncML_S6.php)的方法使用Google Sync将其同步到Google帐户。然后就可以在Gmail的通讯录当中访问了。换了iPhone之后自然要把通讯录从Google帐户同步过来。

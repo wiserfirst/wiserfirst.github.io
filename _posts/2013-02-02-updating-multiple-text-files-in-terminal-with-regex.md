@@ -1,6 +1,7 @@
 ---
 title: "Updating Multiple Text Files in Terminal with Regular Expression"
 date: "2013-02-02"
+tags: cygwin linux regex
 ---
 
 I am trying to do this in Cygwin on windows, but I think it should work just fine on Linux. The steps are as listed below.
