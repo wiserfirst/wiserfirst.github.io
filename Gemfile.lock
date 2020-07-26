@@ -78,15 +78,12 @@ GEM
       rexml
     kramdown-parser-gfm (1.1.0)
       kramdown (~> 2.0)
-    libv8 (8.4.255.0)
     liquid (4.0.3)
     listen (3.2.1)
       rb-fsevent (~> 0.10, >= 0.10.3)
       rb-inotify (~> 0.9, >= 0.9.10)
     mercenary (0.4.0)
     mini_portile2 (2.4.0)
-    mini_racer (0.3.1)
-      libv8 (~> 8.4.255)
     minimal-mistakes-jekyll (4.19.3)
       jekyll (>= 3.7, < 5.0)
       jekyll-feed (~> 0.1)
@@ -139,7 +136,6 @@ DEPENDENCIES
   jekyll-seo-tag (~> 2.6)
   jekyll-sitemap (~> 1.4)
   jemoji (~> 0.12)
-  mini_racer
   minimal-mistakes-jekyll (~> 4.19)
 
 BUNDLED WITH
