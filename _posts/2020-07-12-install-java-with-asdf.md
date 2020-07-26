@@ -1,6 +1,6 @@
 ---
 title: "Install Java with Asdf"
-date: "2019-08-03"
+date: "2020-07-12"
 tags: java asdf
 ---
 
