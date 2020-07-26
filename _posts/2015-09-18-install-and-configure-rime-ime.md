@@ -7,7 +7,7 @@ date: "2015-09-18"
 
 ## 鼠鬚管的安装
 
-可以直接到[官方网站的下载页面](http://rime.im/download/)下载安装文件并手动安装，或者使用[Homebrew Cask](http://caskroom.io/):
+可以直接到[官方网站的下载页面](http://rime.im/download/)下载安装文件并手动安装，或者使用[Homebrew Cask](https://github.com/Homebrew/homebrew-cask):
 
 ```bash
 brew cask install squirrel

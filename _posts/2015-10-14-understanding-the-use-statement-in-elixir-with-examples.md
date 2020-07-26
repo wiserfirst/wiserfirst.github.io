@@ -1,5 +1,5 @@
 ---
-title: "Understanding the Use Statement in Elixir with Example"
+title: "Understanding the Use Statement in Elixir with Examples"
 date: "2015-10-14"
 ---
 

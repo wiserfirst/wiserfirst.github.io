@@ -23,11 +23,11 @@ Many geeks are using Macbook or iMac, and they are sharing their opinions about 
 
 郝培强[@tinyfool](https://twitter.com/tinyfool): [为什么我认为每个程序员都应该用Mac OS X？](https://tiny4.org/blog/2010/02/why-programmers-should-use-mac-os-x/)
 
-张琮翔@vgod: [为什么我用Mac](https://blog.vgod.tw/2010/05/26/why-i-use-mac/ "Permanent Link to 为什么我用Mac")
+张琮翔[@vgod](https://twitter.com/vgod): [为什么我用Mac](http://blog.vgod.tw/2010/05/26/why-i-use-mac/)
 
-方块[@KrzyCube](https://www.twitter.com/krzycube): [Mac诱惑](https://blog.krzycube.net/mac-attraction/"Permanent Link to Mac诱惑")
+方块[@KrzyCube](https://twitter.com/krzycube): [Mac诱惑](https://blog.krzycube.net/mac-attraction/)
 
-阿禅[@jason5ng32](https://www.twitter.com/jason5ng32):
+阿禅[@jason5ng32](https://twitter.com/jason5ng32):
 
 [你是否真的需要iPhone?](https://www.kenengba.com/post/765.html)
 

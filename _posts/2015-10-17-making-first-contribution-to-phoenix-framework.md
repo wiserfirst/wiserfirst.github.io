@@ -1,5 +1,5 @@
 ---
-title: "Making my first contribution to the Phoenix framework"
+title: "Making My First Contribution to the Phoenix Framework"
 date: "2015-10-17"
 ---
 
