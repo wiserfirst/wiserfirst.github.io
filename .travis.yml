@@ -24,10 +24,10 @@ addons:
       # Added for "Peer certificate cannot be authenticated with given
 branches:
   only:
-    - master
+    - develop
 jobs:
   include:
-    - stage: Test
+    - stage: Build & Release
       before_script:
         - npm install --global markdownlint-cli
       script:
@@ -66,6 +66,11 @@ jobs:
           --http-status-ignore "999"
           --typhoeus-config '{"ssl_verifypeer": false, "ssl_verifyhost": 0}'
           # --disable-external
-    - stage: Netlify Release
-      script:
-        - curl -X POST -d {} https://api.netlify.com/build_hooks/5f1ecb181ce64e1f21593344
+        deploy:
+          provider: pages
+          skip_cleanup: true
+          github_token: $GITHUB_TOKEN
+          target_branch: release
+          keep_history: true
+          on:
+            branch: develop
