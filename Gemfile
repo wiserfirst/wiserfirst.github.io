@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
 source 'https://rubygems.org'
+ruby '2.7.1'
 # Hello! This is where you manage which Jekyll version is used to run.
 # When you want to use a different version, change it below, save the
 # file and run `bundle install`. Run Jekyll with `bundle exec`, like so:
@@ -9,6 +10,18 @@ source 'https://rubygems.org'
 #
 # This will help ensure the proper Jekyll version is running.
 gem 'jekyll', '~> 4.0'
+
+group :development do
+  # Command line tool to easily handle events on file system modifications
+  gem 'guard', '~> 2.16'
+  # Guard extension to run cli processes
+  gem 'guard-process', '~> 1.2'
+end
+
+group :development, :test do
+  # Test your rendered HTML files to make sure they're accurate
+  gem 'html-proofer', '~> 3.15'
+end
 
 # the theme
 # If you have any plugins, put them here!
