@@ -4,7 +4,8 @@ date: "2011-09-05"
 tags: google python
 ---
 
-之前用的手机是Nokia，为了保存上面的通讯录，我按照[这里](http://www.allaboutsymbian.com/news/item/8922_Google_Sync_Beta_for_SyncML_S6.php)的方法使用Google Sync将其同步到Google帐户。然后就可以在Gmail的通讯录当中访问了。换了iPhone之后自然要把通讯录从Google帐户同步过来。
+之前用的手机是Nokia，为了保存上面的通讯录，我按照[这里](http://www.allaboutsymbian.com/news/item/8922_Google_Sync_Beta_for_SyncML_S6.php)的方法使用Google
+Sync将其同步到Google帐户。然后就可以在Gmail的通讯录当中访问了。换了iPhone之后自然要把通讯录从Google帐户同步过来。
 
 步骤如下：
 
@@ -20,7 +21,9 @@ tags: google python
 
 第一反应是问Google，但是一番搜索并没有发现解决方案——似乎没有人碰到这个问题……
 
-那只能尝试着自己动手了。简单分析一下这个问题，应该是把号码标签类型从`Other`改成`Mobile`或者`Home`。登录到Gmail上手动改当然是可以了，不过偶的通讯录有200多条，一个个改太麻烦了。作为程序员，应该尝试自己写代码解决问题，Google应该有提供修改联系人的API。查一下果然有，就是这个[Google Contacts API](https://developers.google.com/contacts/v3)。Google提供Java、.NET及python等多种语言接口，由于正在自学python，就用它吧。下载[gdata-python-client](https://github.com/google/gdata-python-client)，然后开始研究电话号码及其标签是使用什么数据结构保存的。结果如下：
+那只能尝试着自己动手了。简单分析一下这个问题，应该是把号码标签类型从`Other`改成`Mobile`或者`Home`。登录到Gmail上手动改当然是可以了，不过偶的通讯录有200多条，一个个改太麻烦了。作为程序员，应该尝试自己写代码解决问题，Google应该有提供修改联系人的API。查一下果然有，就是这个[Google
+Contacts
+API](https://developers.google.com/contacts/v3)。Google提供Java、.NET及python等多种语言接口，由于正在自学python，就用它吧。下载[gdata-python-client](https://github.com/google/gdata-python-client)，然后开始研究电话号码及其标签是使用什么数据结构保存的。结果如下：
 
 * 通讯录条目类型为`class gdata.contacts.data.ContactEntry`；
 * 其中的电话号码字段名为`phone_number`，它是一个list，每个电话号码为list中一项，类型是`class gdata.data.PhoneNumber`；
@@ -41,7 +44,7 @@ tags: google python
 
 然后就开始写代码，逻辑无非就是：
 
-```
+```python
 if 号码标签为Other:
     if 手机号:
         将号码标签改为Mobile

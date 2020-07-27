@@ -1,10 +1,13 @@
 ---
-title: "Opinions about Mac, iPhone and other Apple products"
+title: "Opinions about Mac, iPhone and Other Apple Products"
 date: "2010-08-02"
 tags: apple mac iPhone
 ---
 
-Many geeks are using Macbook or iMac, and they are sharing their opinions about Apple products. That's why I've decided to buy a Macbook too. Here is  a collection of views or feelings on Apple computer from different people, as well as some useful tips for using it.
+Many geeks are using Macbook or iMac, and they are sharing their opinions about
+Apple products. That's why I've decided to buy a Macbook too. Here is a
+collection of views or feelings on Apple computer from different people, as well
+as some useful tips for using it.
 
 李笑来[@xiaolai](https://twitter.com/xiaolai): [All About Apple](https://www.lixiaolai.com/apple)
 

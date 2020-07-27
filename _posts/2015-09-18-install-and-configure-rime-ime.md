@@ -50,9 +50,10 @@ menu:
   page_size: 6
 ```
 
-### 修改候选词数量
+### 修改候选词词频调整阀限
 
-鼠鬚管默认有智能词频调整，但是频次阀限较高，所以调整比较慢。如果希望根据当前的输入更快进行词频调整，在`luna_pinyin_simp.schema.yaml`的`version`下方加一行`sort: by_weight`，如下
+鼠鬚管默认有智能词频调整，但是频次阀限较高，所以调整比较慢。如果希望根据当前的输入更快进行词频调整，在`luna_pinyin_simp.schema.yaml`的`version`下方加一行`sort:
+by_weight`，如下
 
 ```yaml
 schema:
@@ -67,6 +68,7 @@ schema:
 ```
 
 ## 参考
+
 1. [官方网站上的文档](http://rime.im/docs/)，其实内容都是放在[Rime Github项目的Wiki页面](https://github.com/rime/home/wiki)中的
 2. [鼠须管，“神级”输入法](http://www.ifanr.com/156409) from 爱范儿
 3. [推薦一個神級輸入法——Rime](https://www.byvoid.com/blog/recommend-rime) by @byvoid
