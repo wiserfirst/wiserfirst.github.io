@@ -13,4 +13,4 @@ But as another answer for the same question pointed out, since macOS Sierra
 Keys:
 
 ![Screenshot of System Preferences -> Keyboard -> Modifier
-Keys](https://cdn-images-1.medium.com/max/3120/1*KRZP7t9-MrDXR1zTV7ClSA.png)
+Keys](/assets/images/2018-03-15/high-sierra-screenshot.png)

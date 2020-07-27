@@ -29,12 +29,10 @@ jobs:
   include:
     - stage: Test
       before_script:
-        - npm install --global sass-lint htmllint-cli markdownlint-cli
+        - npm install --global markdownlint-cli
       script:
         - JEKYLL_ENV=production bundle exec jekyll build
-        - htmllint _includes/stripped_markdown.html
         - markdownlint _posts _drafts _pages README.md
-        - sass-lint --verbose --no-exit
         # Explanations for flags:
         # --allow-hash-href - Build will fail on the first and last post entries
         # if this isn't allowed since there will be previous and next buttons
@@ -68,3 +66,6 @@ jobs:
           --http-status-ignore "999"
           --typhoeus-config '{"ssl_verifypeer": false, "ssl_verifyhost": 0}'
           # --disable-external
+    - stage: Netlify Release
+      script:
+        - curl -X POST -d {} https://api.netlify.com/build_hooks/5f1ecb181ce64e1f21593344
