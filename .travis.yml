@@ -24,7 +24,6 @@ addons:
       # Added for "Peer certificate cannot be authenticated with given
 branches:
   only:
-    - master
     - develop
 jobs:
   include:
