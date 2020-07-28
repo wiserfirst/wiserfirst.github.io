@@ -1,7 +1,7 @@
 # References:
 # - https://docs.travis-ci.com/user/caching/#Bundler
 os: linux
-dist: trusty
+dist: bionic
 language: ruby
 cache: bundler
 rvm:
@@ -24,6 +24,7 @@ addons:
       # Added for "Peer certificate cannot be authenticated with given
 branches:
   only:
+    - master
     - develop
 jobs:
   include:
@@ -66,11 +67,11 @@ jobs:
           --http-status-ignore "999"
           --typhoeus-config '{"ssl_verifypeer": false, "ssl_verifyhost": 0}'
           # --disable-external
-        deploy:
-          provider: pages
-          skip_cleanup: true
-          github_token: $GITHUB_TOKEN
-          target_branch: release
-          keep_history: true
-          on:
-            branch: develop
+      deploy:
+        provider: pages
+        skip_cleanup: true
+        github_token: $GITHUB_TOKEN
+        target_branch: release
+        keep_history: true
+        on:
+          branch: develop
