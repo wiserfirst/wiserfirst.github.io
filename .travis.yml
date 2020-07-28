@@ -68,8 +68,8 @@ jobs:
           # --disable-external
       deploy:
         provider: pages
-        skip_cleanup: true
-        github_token: $GITHUB_TOKEN
+        strategy: git
+        token: $GITHUB_TOKEN
         target_branch: release
         keep_history: true
         on:
