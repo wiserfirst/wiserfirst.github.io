@@ -67,11 +67,11 @@ jobs:
           --http-status-ignore "999"
           --typhoeus-config '{"ssl_verifypeer": false, "ssl_verifyhost": 0}'
           # --disable-external
-        deploy:
-          provider: pages
-          skip_cleanup: true
-          github_token: $GITHUB_TOKEN
-          target_branch: release
-          keep_history: true
-          on:
-            branch: develop
+      deploy:
+        provider: pages
+        skip_cleanup: true
+        github_token: $GITHUB_TOKEN
+        target_branch: release
+        keep_history: true
+        on:
+          branch: develop
