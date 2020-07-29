@@ -94,10 +94,8 @@ SPDX-License-Identifier: (MIT AND CC-BY-4.0)
 [Guard]: https://github.com/guard/guard
 [HTMLProofer]: https://github.com/gjtorikian/html-proofer
 [Jekyll]: https://jekyllrb.com
-[license-cc]: LICENSE-CC-BY-4.0.txt
 [license-cc-badge]: https://licensebuttons.net/l/by/4.0/80x15.png
 [license-cc-url]: https://creativecommons.org/licenses/by/4.0/legalcode
-[license-mit]: LICENSE-MIT.txt
 [license-mit-badge]: https://img.shields.io/badge/License-MIT-lightgrey.svg
 [license-mit-url]: https://opensource.org/licenses/MIT
 [markdownlint]: https://github.com/DavidAnson/markdownlint
