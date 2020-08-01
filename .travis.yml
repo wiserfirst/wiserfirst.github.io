@@ -22,9 +22,6 @@ addons:
       # Needed for htmlproofer external link checks
       - libcurl4-openssl-dev
       # Added for "Peer certificate cannot be authenticated with given
-branches:
-  only:
-    - develop
 jobs:
   include:
     - stage: Build & Release
