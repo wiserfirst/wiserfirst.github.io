@@ -4,10 +4,10 @@ date: 2020-07-18 18:31:00 +1000
 categories: mocking prism
 ---
 
-Recently my team is working on API integration with a third party service.
+Recently my team has been working on API integration with a third party service.
 Unfortunately, for some reason we do not yet have access to a sandbox
-environment. Didn't want to be blocked by this, we decided to build a
-local mocked API server.
+environment. Didn't want to be blocked by this, we decided to build a local
+mocked API server.
 
 Luckily for us, we were able to find an [OpenAPI][] specification file for the
 API of this service and also discovered an excellent tool called [Prism][] for
@@ -47,11 +47,11 @@ running :tada:.
 ## Add Example Responses
 
 Having the server running is great, but at this point it would only return empty
-responses because no example responses is defined in the JSON file. To add
+responses because no example response has been defined in the JSON file. To add
 example responses for various HTTP status codes, you'll need to edit the
 `petstore.json` file.
 
-For example, say we'd like the `/pet/:petId` endpoint to return the following
+For instance, say we'd like the `/pet/:petId` endpoint to return the following
 example response for a successful GET request:
 
 ```json
@@ -129,7 +129,7 @@ real API server and make sure everything works as expected.
 
 ## Summary
 
-As you can see, if a third party service offer an OpenAPI specification file, It
+As you can see, if a third party service offer an OpenAPI specification file, it
 is reasonably simple to get a local mock server up and running with Prism for
 their API. It is also very approachable to add example responses for the mocked
 endpoints by editing the specification file. Since Postman can import an OpenAPI
