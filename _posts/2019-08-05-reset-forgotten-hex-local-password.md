@@ -1,6 +1,6 @@
 ---
 title: "Reset Forgotten Hex Local Password"
-date: "2019-08-03"
+date: "2019-08-05"
 tags: hex
 ---
 
