@@ -1,7 +1,7 @@
 ---
 title: "API Mocking with Prism"
 date: 2020-07-18 18:31:00 +1000
-categories: mocking prism
+tags: mocking prism
 ---
 
 Recently my team has been working on API integration with a third party service.
