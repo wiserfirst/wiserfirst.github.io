@@ -13,8 +13,8 @@ follows:
 
 ```sh
 asdf plugin add ruby
-asdf install ruby 2.7.1
-asdf global ruby 2.7.1
+asdf install ruby 2.7.2
+asdf global ruby 2.7.2
 ```
 
 ### Clone the Repository
