@@ -201,7 +201,7 @@ their great work.
 [metered paywall]: https://help.medium.com/hc/en-us/articles/360017581433-About-the-metered-paywall
 [Minimal Mistakes]: https://mmistakes.github.io/minimal-mistakes/
 [Paul]: https://twitter.com/paulfioravanti
-[paulfioravanti.com]: https://paulfioravanti.com
+[paulfioravanti.com]: https://www.paulfioravanti.com
 [source for his blog]: https://github.com/paulfioravanti/paulfioravanti.github.io
 [Scribble]: https://github.com/muan/scribble
 [Turndown]: https://domchristie.github.io/turndown/
