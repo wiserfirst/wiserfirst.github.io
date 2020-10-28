@@ -1,7 +1,8 @@
 [![Build Status][Build Status image]][Build Status url]
+[![Netlify Status][Netlify Status image]][Netlify Status url]
 
-This is the codebase for my personal blog at [`wiserfirst.com`][],
-which is created with [Jekyll][] and hosted on [Netlify][]
+This is the codebase for my personal blog at [`wiserfirst.com`][], created with
+[Jekyll][] and hosted on [Netlify][]
 
 ## Install
 
@@ -12,8 +13,8 @@ follows:
 
 ```sh
 asdf plugin add ruby
-asdf install ruby 2.7.1
-asdf global ruby 2.7.1
+asdf install ruby 2.7.2
+asdf global ruby 2.7.2
 ```
 
 ### Clone the Repository
@@ -74,6 +75,27 @@ This blog currently uses the [Minimal Mistakes][] theme.
 This blog is current deployed to [Netlify][] with [Travis CI][] running the
 builds.
 
+Just push to the `develop` branch to trigger a new build and if the build is
+successful, site would be built and pushed to the `release` branch. Then a new
+deployment will be triggered on Netlify, since it monitors the `release` branch.
+
+The only caveat is when there is a new post, the following section in travis
+yaml file (which runs `htmlproofer`) needs to be commented out for the build to
+pass:
+
+```yaml
+  - >
+    bundle exec htmlproofer _site
+    --allow-hash-href
+    --assume-extension
+    --url-ignore "/localhost/,/facebook.com\/sharer\/sharer.php/,#main,/iteye.com\/blog/,/www.williamlong.info/"
+    --http-status-ignore "999"
+    --typhoeus-config '{"ssl_verifypeer": false, "ssl_verifyhost": 0}'
+```
+
+Once the site is deployed with the new post, `htmlproofer` can be re-enabled
+again in a follow up commit.
+
 ## License
 
 | Category |                         License                           |
@@ -102,6 +124,8 @@ SPDX-License-Identifier: (MIT AND CC-BY-4.0)
 [markdownlint-cli]: https://github.com/igorshubovych/markdownlint-cli
 [Minimal Mistakes]: https://github.com/mmistakes/minimal-mistakes
 [Netlify]: https://www.netlify.com
+[Netlify Status image]: https://api.netlify.com/api/v1/badges/e997650f-fd0c-44c5-a6a5-1488dad7d879/deploy-status
+[Netlify Status url]: https://app.netlify.com/sites/elastic-villani-588077/deploys
 [Node]: https://github.com/nodejs/node
-[Travis CI]: https://travis-ci.org/
+[Travis CI]: https://travis-ci.com/
 [`wiserfirst.com`]: https://www.wiserfirst.com
