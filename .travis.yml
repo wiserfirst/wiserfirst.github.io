@@ -16,7 +16,12 @@ env:
   global:
     # speeds up installation of htmlproofer
     - NOKOGIRI_USE_SYSTEM_LIBRARIES=true
-    - HTMLPROOFER_IGNORE_HREFS="/localhost/,/www.allaboutsymbian.com/,#main,/iteye.com\/blog/,/www.williamlong.info/,/help.medium.com/"
+    # NOTE: The minimal-mistakes-generated 404 page seems to have a #main
+    # hash href to nowhere, so ignore all #main hash links for now; I don't
+    # have any that I've created in any pages that I control.
+    # Also for some reason, the following sites do not work reliably with
+    # htmlproofer, so ignoring them for now
+    - HTMLPROOFER_IGNORE_HREFS="/localhost/,#main,/help.medium.com/,/www.allaboutsymbian.com/,/iteye.com\/blog/,/www.williamlong.info/"
 addons:
   apt:
     packages:
@@ -47,9 +52,6 @@ jobs:
         # NOTE: If a new post is created or new tags are introduced via a post,
         # htmlproofer will need to be disabled for a build in order to proceed
         # forward
-        # NOTE 2: The minimal-mistakes-generated 404 page seems to have a #main
-        # hash href to nowhere, so ignore all #main hash links for now; I don't
-        # have any that I've created in any pages that I control.
         - >
           bundle exec htmlproofer _site
           --allow-hash-href
