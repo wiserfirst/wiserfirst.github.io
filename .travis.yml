@@ -52,13 +52,13 @@ jobs:
         # NOTE: If a new post is created or new tags are introduced via a post,
         # htmlproofer will need to be disabled for a build in order to proceed
         # forward
-        - >
-          bundle exec htmlproofer _site
-          --allow-hash-href
-          --assume-extension
-          --url-ignore $HTMLPROOFER_IGNORE_HREFS
-          --http-status-ignore "999"
-          --typhoeus-config '{"ssl_verifypeer": false, "ssl_verifyhost": 0}'
+        # - >
+        #   bundle exec htmlproofer _site
+        #   --allow-hash-href
+        #   --assume-extension
+        #   --url-ignore $HTMLPROOFER_IGNORE_HREFS
+        #   --http-status-ignore "999"
+        #   --typhoeus-config '{"ssl_verifypeer": false, "ssl_verifyhost": 0}'
           # --disable-external
       deploy:
         provider: pages
