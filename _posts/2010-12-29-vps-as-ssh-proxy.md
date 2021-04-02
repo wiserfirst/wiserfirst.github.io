@@ -22,7 +22,7 @@ passwd username
 userdel username
 ```
 
-为了保证用户名和密码的安全性，我使用了一个国外网站上的在线工具生成随机字符串作为用户名和密码，地址在[这里](http://www.pctools.com/guides/password/?length=12&phonetic=on&alpha=on&mixedcase=on&numeric=on&punctuation=on&nosimilar=on&quantity=1&generate=true#password_generator)。可以指定包含字符的类别和串的长度，个人认为挺好用的，回头有时间自己写一个。
+为了保证用户名和密码的安全性，我使用了一个国外网站上的在线工具生成随机字符串作为用户名和密码，~~地址在这里~~(2021-04-02注：此工具网站已下线)。可以指定包含字符的类别和串的长度，个人认为挺好用的，回头有时间自己写一个。
 
 密码设好以后，Server配置就完成了，接下来做Client配置。在Windows下可以使用Bitvise
 Tunnelier(2020-07-27注：已更名为Bitvise SSH Client)，点[这里下载](https://dl.bitvise.com/BvSshClient-Inst.exe)，其配置实用参考了[这篇文章](http://www.vpsmm.com/edu/ssh-sockt-5-fuck-g-f-w.html)。
