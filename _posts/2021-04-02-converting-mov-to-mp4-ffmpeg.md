@@ -1,6 +1,6 @@
 ---
 title: "Converting mov/avi to mp4 with ffmpeg"
-date: 2021-04-01 11:50:00 +1000
+date: 2021-04-02 11:50:00 +1000
 tags: ffmpeg
 ---
 
