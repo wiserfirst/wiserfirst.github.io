@@ -35,3 +35,5 @@ following in my `.vimrc`:
 ```vim
     let g:snipMate = { 'snippet_version' : 1 }
 ```
+
+Now the annoying warning upon starting Vim is gone :tada:
