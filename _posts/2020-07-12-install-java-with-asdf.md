@@ -1,5 +1,5 @@
 ---
-title: "Install Java with Asdf"
+title: "Install Java with asdf"
 date: "2020-07-12"
 tags: java asdf
 ---
