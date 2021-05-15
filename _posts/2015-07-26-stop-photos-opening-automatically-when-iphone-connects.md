@@ -1,6 +1,6 @@
 ---
 title: "Stop Photos Opening Automatically when iPhone Connects"
-date: "2015-07-26"
+date: "2015-07-26 10:00:00 +1000"
 tags: iPhone Photos
 ---
 

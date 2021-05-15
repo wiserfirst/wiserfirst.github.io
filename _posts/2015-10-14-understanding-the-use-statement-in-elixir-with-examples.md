@@ -1,6 +1,6 @@
 ---
 title: "Understanding the Use Statement in Elixir with Examples"
-date: "2015-10-14"
+date: "2015-10-14 10:00:00 +1100"
 tags: elixir use
 ---
 

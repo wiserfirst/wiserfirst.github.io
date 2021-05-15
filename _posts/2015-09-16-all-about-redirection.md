@@ -1,6 +1,6 @@
 ---
 title: "All about Redirection"
-date: "2015-09-16"
+date: "2015-09-16 10:00:00 +1000"
 tags: linux redirection
 ---
 

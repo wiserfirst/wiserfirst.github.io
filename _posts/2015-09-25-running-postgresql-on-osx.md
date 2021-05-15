@@ -1,6 +1,6 @@
 ---
 title: "Running PostgreSQL on OSX"
-date: "2015-09-25"
+date: "2015-09-25 10:00:00 +1000"
 tags: postgres macos
 ---
 

@@ -1,6 +1,6 @@
 ---
 title: "Restore Gem to Original State after Bundle Open"
-date: "2017-12-19"
+date: "2017-12-19 10:00:00 +1100"
 tags: ruby bundle gem
 ---
 

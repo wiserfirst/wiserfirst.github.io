@@ -1,6 +1,6 @@
 ---
 title: "Learning How to Learn Part 1"
-date: "2015-11-08"
+date: "2015-11-08 10:00:00 +1100"
 tags: learning
 ---
 

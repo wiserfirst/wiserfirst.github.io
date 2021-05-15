@@ -1,6 +1,6 @@
 ---
 title: "历史上那些最愚蠢的话"
-date: "2010-12-08"
+date: "2010-12-08 10:00:00 +0800"
 ---
 
 本文为翻译，并非原创。出处在此：[SEVERAL DOZEN OF THE STUPIDEST THINGS EVER SAID](http://interstel.net/~jdpaul/stupidity.technology.html)

@@ -1,6 +1,6 @@
 ---
 title: "通过API更新Google账户通讯录"
-date: "2011-09-05"
+date: "2011-09-05 10:00:00 +0800"
 tags: google python
 ---
 

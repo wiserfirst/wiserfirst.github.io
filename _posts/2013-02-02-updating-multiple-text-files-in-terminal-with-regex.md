@@ -1,6 +1,6 @@
 ---
 title: "Updating Multiple Text Files in Terminal with Regular Expression"
-date: "2013-02-02"
+date: "2013-02-02 10:00:00 +0800"
 tags: cygwin linux regex
 ---
 

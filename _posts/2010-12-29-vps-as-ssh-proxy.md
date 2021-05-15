@@ -1,6 +1,6 @@
 ---
 title: "使用VPS做SSH代理"
-date: "2010-12-29"
+date: "2010-12-29 10:00:00 +0800"
 tags: vps ssh proxy
 ---
 
