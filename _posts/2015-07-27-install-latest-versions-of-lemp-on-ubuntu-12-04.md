@@ -1,6 +1,6 @@
 ---
 title: "Install Latest Versions of Linux, Nginx, MySQL and PHP (LEMP) on Ubuntu 12.04"
-date: "2015-07-27"
+date: "2015-07-27 10:00:00 +1000"
 tags: linux nginx mysql php ubuntu
 ---
 

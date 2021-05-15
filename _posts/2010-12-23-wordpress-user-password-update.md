@@ -1,6 +1,6 @@
 ---
 title: "Wordpress用户密码修改"
-date: "2010-12-23"
+date: "2010-12-23 10:00:00 +0800"
 tags: wordpress
 ---
 

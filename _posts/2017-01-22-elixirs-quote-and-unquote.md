@@ -1,6 +1,6 @@
 ---
 title: "Elixir's quote and unquote"
-date: "2017-01-22"
+date: "2017-01-22 10:00:00 +1100"
 tags: elixir
 ---
 

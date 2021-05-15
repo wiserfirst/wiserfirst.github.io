@@ -1,6 +1,6 @@
 ---
 title: "Making My First Contribution to the Phoenix Framework"
-date: "2015-10-17"
+date: "2015-10-17 10:00:00 +1100"
 tags: phoenix elixir mix bootstrap
 ---
 

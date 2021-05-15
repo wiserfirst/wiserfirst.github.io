@@ -1,6 +1,6 @@
 ---
 title: "Remap Caps Lock to ESC on macOS"
-date: "2018-03-15"
+date: "2018-03-15 10:00:00 +1100"
 tags: macos
 ---
 

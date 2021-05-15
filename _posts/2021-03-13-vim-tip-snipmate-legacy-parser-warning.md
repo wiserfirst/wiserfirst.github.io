@@ -1,6 +1,6 @@
 ---
 title: "Vim Tip: Fix Legacy Parser Warning for snipMate"
-date: 2021-03-13 10:40:00 +1000
+date: 2021-03-13 10:40:00 +1100
 tags: tiny-tips vim
 ---
 

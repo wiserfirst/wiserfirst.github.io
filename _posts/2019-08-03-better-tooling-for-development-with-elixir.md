@@ -1,6 +1,6 @@
 ---
 title: "Better Tooling for Development with Elixir"
-date: "2019-08-03"
+date: "2019-08-03 10:00:00 +1000"
 tags: elixir credo git_hooks
 ---
 

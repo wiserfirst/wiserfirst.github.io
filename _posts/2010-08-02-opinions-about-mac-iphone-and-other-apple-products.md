@@ -1,6 +1,6 @@
 ---
 title: "Opinions about Mac, iPhone and Other Apple Products"
-date: "2010-08-02"
+date: "2010-08-02 10:00:00 +0800"
 tags: apple mac iPhone
 ---
 

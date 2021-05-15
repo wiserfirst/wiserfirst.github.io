@@ -1,6 +1,6 @@
 ---
 title: "Make a Shell Command Always Succeed"
-date: "2019-07-20"
+date: "2019-07-20 10:00:00 +1000"
 tags: linux bash
 ---
 

@@ -1,6 +1,6 @@
 ---
 title: "How to Increase MySQL Table Size for Memory Storage Engine"
-date: "2015-10-30"
+date: "2015-10-30 10:00:00 +1100"
 tags: mysql
 ---
 
