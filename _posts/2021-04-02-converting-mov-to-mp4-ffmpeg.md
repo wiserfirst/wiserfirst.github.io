@@ -5,7 +5,7 @@ last_modified_at: 2021-05-16 17:40:00 +1000
 tags: ffmpeg mov avi mp4
 header:
   image: /assets/images/2021-05-16/hobbit_1440_420.jpg
-  image_description: "Coding in Node.js"
+  image_description: "Hobbiton Movie Set"
   teaser: /assets/images/2021-05-16/hobbit_1440_420.jpg
   overlay_image: /assets/images/2021-05-16/hobbit_1440_420.jpg
   overlay_filter: 0.4

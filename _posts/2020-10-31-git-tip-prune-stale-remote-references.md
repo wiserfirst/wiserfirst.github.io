@@ -1,7 +1,18 @@
 ---
 title: "Git Tip: Prune Stale Remote References"
 date: 2020-10-31 18:20:00 +1000
+last_modified_at: 2021-05-16 18:15:00 +1000
 tags: tiny-tips git
+header:
+  image: /assets/images/2021-05-16/git_1440_480.jpg
+  image_description: "A Git GUI client"
+  teaser: /assets/images/2021-05-16/git_1440_480.jpg
+  overlay_image: /assets/images/2021-05-16/git_1440_480.jpg
+  overlay_filter: 0.75
+  caption: >
+    Image by [Yancy Min](https://unsplash.com/@yancymin?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
+    from [Unsplash](https://unsplash.com/s/photos/git?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
+excerpt: "A Git tip that I didn't know before and I find it very useful at times"
 ---
 
 When a colleague pushes a new branch to Github, we can run the following to get
