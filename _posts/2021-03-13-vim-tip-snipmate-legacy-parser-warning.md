@@ -1,7 +1,16 @@
 ---
 title: "Vim Tip: Fix Legacy Parser Warning for snipMate"
 date: 2021-03-13 10:40:00 +1100
+last_modified_at: 2021-05-16 17:35:00 +1000
 tags: tiny-tips vim
+header:
+  image: /assets/images/2021-05-16/vim_1440_400.jpg
+  image_description: "Coding with Vim"
+  teaser: /assets/images/2021-05-16/vim_1440_400.jpg
+  overlay_image: /assets/images/2021-05-16/vim_1440_400.jpg
+  overlay_filter: 0.6
+  caption: Coding with Vim by Qing Wu
+excerpt: "A quick tip for resolving a warning message from snipMate"
 ---
 
 If you use both Vim and snipMate, and upgraded snipMate to the latest version

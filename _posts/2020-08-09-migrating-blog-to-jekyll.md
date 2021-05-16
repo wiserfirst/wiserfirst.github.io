@@ -1,7 +1,18 @@
 ---
 title: "Migrating Blog to Jekyll"
 date: 2020-10-26 15:31:00 +1000
+last_modified_at: 2021-05-16 18:22:00 +1000
 tags: jekyll blog
+header:
+  image: /assets/images/2021-05-16/typewriter_1440_480.jpg
+  image_description: "Typewriter on Wooden Table"
+  teaser: /assets/images/2021-05-16/typewriter_1440_480.jpg
+  overlay_image: /assets/images/2021-05-16/typewriter_1440_480.jpg
+  overlay_filter: 0.6
+  caption: >
+    Image by [Markus Winkler](https://unsplash.com/@markuswinkler?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
+    from [Unsplash](https://unsplash.com/s/photos/journal?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
+excerpt: Phases of my ten-year blogging journey and how it landed back on Jekyll
 ---
 
 Back in 2010, I started blogging on [WordPress]. The reason was simple, I

@@ -1,7 +1,18 @@
 ---
 title: "Converting mov/avi to mp4 with ffmpeg"
 date: 2021-04-02 11:50:00 +1000
-tags: ffmpeg
+last_modified_at: 2021-05-16 17:40:00 +1000
+tags: ffmpeg mov avi mp4
+header:
+  image: /assets/images/2021-05-16/hobbit_1440_420.jpg
+  image_description: "Hobbiton Movie Set"
+  teaser: /assets/images/2021-05-16/hobbit_1440_420.jpg
+  overlay_image: /assets/images/2021-05-16/hobbit_1440_420.jpg
+  overlay_filter: 0.4
+  caption: >
+    Image by [Andres Iga](https://unsplash.com/@andresiga?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
+    from [Unsplash](https://unsplash.com/s/photos/movie?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
+excerpt: "Explore a great cli tool for converting between video formats"
 ---
 
 Since I have a camera that captures video in Quicktime movie format, I end up
