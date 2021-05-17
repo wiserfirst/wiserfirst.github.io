@@ -1,6 +1,7 @@
 ---
 title: "How to Use asdf Version Manager on macOS"
 date: "2021-05-15 19:35:00 +1000"
+last_modified_at: 2021-05-17 21:23:00 +1000
 tags: asdf version-manager macos ruby nodejs python
 header:
   image: /assets/images/2021-05-15/coding_1440_400.jpg
@@ -65,7 +66,12 @@ First make sure that `coreutils`, `curl` and `git` are installed:
 brew install coreutils curl git
 ```
 
-I recommend installing asdf with Git and cloning the latest tag is enough:
+### Install with Git
+
+Personally I prefer installing asdf with Git, because it gives complete control
+and avoids some pitfalls.
+
+Cloning the latest tag is enough:
 
 ```sh
 git clone https://github.com/asdf-vm/asdf.git ~/.asdf --branch v0.8.0
@@ -83,6 +89,23 @@ Then for Zsh add the following to the bottom of `~/.zshrc`:
 
 Open a new terminal tab and you should be ready to use asdf :tada:
 
+### Install with Homebrew
+
+The alternative is to install asdf with Homebrew:
+
+```sh
+brew install asdf
+```
+
+If you prefer this method, before continuing, do check out [Common Homebrew
+issues] to be aware of potential issues you might run into.
+
+And add the following line to the bottom of your `~/.zshrc`:
+
+```sh
+. $(brew --prefix asdf)/asdf.sh
+```
+
 > If you use Bash or Fish shell, please refer to the [Add to your Shell] section
 > in asdf documentation for instructions.
 
@@ -90,7 +113,7 @@ Open a new terminal tab and you should be ready to use asdf :tada:
 
 Before you could install Ruby, Node.js or anything else, you'll need to add the
 appropriate plugins. Plugins are how asdf understands handling of different
-rogramming languages or say packages.
+programming languages or, say, packages.
 
 There is an [asdf plugins repository] and for all the plugins listed there, you
 can add with just the plugin name. For example, here is how to add the plugins
@@ -144,7 +167,7 @@ asdf install nodejs 14.16.1
 ```
 
 > When you run into issues trying to install a particular language version, make
-> sure the checkout the Github repository for the plugin. It's very likely that
+> sure to check out the Github repository for the plugin. It's very likely that
 > you'll find instructions on how to solve those issues.
 
 ### Set Global Versions
@@ -159,6 +182,10 @@ asdf global nodejs 14.16.1
 
 With this, we've made Ruby 2.7.2 and Node.js 14.16.1 available anywhere for the
 current user.
+
+In asdf terms, "global" means default everywhere. So unless it's overridden with
+either a local or shell version, which are covered in the following sections,
+asdf will assume the global version is the one to use.
 
 ### Set Local Versions (Optional)
 
@@ -267,6 +294,16 @@ therefore you've set a local version for Node.js in the project directory. The
 # cat ~/.tool-versions
 nodejs 10.22.0
 ```
+
+If you're working on a personal project or your team has adopted asdf, it would
+be a very good idea to commit the `.tool-version` file to Git or the version
+control system you use.
+
+On the other hand, if your team hasn't reached an agreement on adopting asdf,
+I'd recommend adding it to `.gitignore` and keeping it locally without
+committing to version control. The [Migrate from Legacy
+Tools](/blog/how-to-use-asdf-on-macos/#migrate-from-legacy-tools) section might
+offer more useful information, if you found yourself in situations like this.
 
 ### Shell Versions
 
@@ -406,7 +443,7 @@ In this post, I covered:
 While there are definitely aspects of asdf that I didn't cover, this should be a
 solid starting point for someone new. After reading this post and following
 along, you should be able to start using asdf with confidence. If you do run
-into issues, checkout [asdf documentation] and Google is your friend.
+into issues, check out [asdf documentation] and Google is your friend.
 
 With asdf, one could manage different versions of all the programming languages
 that they might need without any trouble, and also it makes sharing a common set
@@ -416,12 +453,13 @@ Because of the conveniences it offers, I'm a big fan of asdf and I truly believe
 that every developer should use it or at least know it as a potential option to
 consider.
 
-[asdf documentation]: https://asdf-vm.com/#/core-manage-asdf
 [Add to your Shell]: https://asdf-vm.com/#/core-manage-asdf?id=add-to-your-shell
-[Install Java with asdf]: https://www.wiserfirst.com/blog/install-java-with-asdf/
+[Common Homebrew issues]: https://github.com/asdf-vm/asdf/issues/785
 [Github repository]: https://github.com/asdf-vm/asdf/tags
+[Install Java with asdf]: https://www.wiserfirst.com/blog/install-java-with-asdf/
+[asdf documentation]: https://asdf-vm.com/#/core-manage-asdf
 [asdf plugins repository]: https://asdf-vm.com/#/plugins-all
 [create a plugin]: https://asdf-vm.com/#/plugins-create
-[pyenv]: https://github.com/pyenv/pyenv
 [nvm]: https://github.com/nvm-sh/nvm
+[pyenv]: https://github.com/pyenv/pyenv
 [rbenv]: https://github.com/rbenv/rbenv
