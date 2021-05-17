@@ -30,9 +30,9 @@ on Rails and frontend React. There are quite a number of repositories for
 different services and unsurprisingly not all of them use the same versions of
 Ruby or Node.js.
 
-To manage the different versions of Ruby, [rbenv] is a good tool and for Node.js,
-you have [nvm]. Then Python is introduced for some machine learning related
-tasks, so here comes [pyenv].
+To manage the different versions of Ruby, [rbenv] is a good tool and for
+Node.js, you have [nvm]. Then Python is introduced for some machine learning
+related tasks, so here comes [pyenv].
 
 Three tools to manage versions for three programming languages doesn't sound too
 bad, but they all have slightly different command syntax for you to remember and
@@ -158,7 +158,7 @@ as well.
 ### Install Versions
 
 Suppose we want to install the latest stable release of Ruby 2 and the latest
-LTS release of Node.js, which are 2.7.2 and 14.16.1 respectively as of this
+LTS release of Node.js, which are `2.7.2` and `14.16.1` respectively as of this
 writing. We can simply run the following:
 
 ```sh
@@ -180,8 +180,8 @@ asdf global ruby 2.7.2
 asdf global nodejs 14.16.1
 ```
 
-With this, we've made Ruby 2.7.2 and Node.js 14.16.1 available anywhere for the
-current user.
+With this, we've made Ruby `2.7.2` and Node.js `14.16.1` "globally" available
+for the current user.
 
 In asdf terms, "global" means default everywhere. So unless it's overridden with
 either a local or shell version, which are covered in the following sections,
@@ -200,7 +200,7 @@ asdf local nodejs 10.22.0
 ```
 
 With this local version set, when you are in the legacy project directory or its
-subdirectories, asdf will automatically switch to Node.js version 10.22; when
+subdirectories, asdf will automatically switch to Node.js version `10.22`; when
 you are in any other directories, it'll fallback to the global Node.js version,
 unless of course if there is another local Node.js version set.
 
@@ -216,10 +216,10 @@ This time I needed to run the old client to confirm some behaviours on a page,
 but it requires Node.js 10.
 
 In order to run the old client together with the server, I made another copy of
-the whole project, set a local Node.js version to 10.22.0 in the new directory
+the whole project, set a local Node.js version to `10.22.0` in the new directory
 and run the old client. For the server, since the local Node.js version is
-already set to 14.16.1 in the original project directory, I could still start it
-in as normal.
+already set to `14.16.1` in the original project directory, I could still start
+it in as normal.
 
 That certainly worked fine for me. But later I learned that there is a much
 simpler way: to use an asdf shell version. Without making an extra copy of the
@@ -285,7 +285,7 @@ When you set a local version in a directory, asdf will add or update a line for
 the language in a `.tool-versions` file under that directory. Same as the global
 `.tool-versions` file, it'll be created if not exist already.
 
-Say you do have that legacy project where Node.js 10.22 is required and
+Say you do have that legacy project where Node.js `10.22` is required and
 therefore you've set a local version for Node.js in the project directory. The
 `.tool-versions` file under the project directory should look like this:
 
@@ -318,7 +318,7 @@ Given that's how it works, setting the environment variable for a particular
 language directly in a shell session or even for just one command would work
 too.
 
-The following example starts the Rails server with Ruby version 2.5.3:
+The following example starts the Rails server with Ruby version `2.5.3`:
 
 ```sh
 ASDF_RUBY_VERSION=2.5.3 bundle exec rails server
