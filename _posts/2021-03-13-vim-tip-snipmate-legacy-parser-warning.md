@@ -10,7 +10,7 @@ header:
   overlay_image: /assets/images/2021-05-16/vim_1440_400.jpg
   overlay_filter: 0.6
   caption: Coding with Vim by Qing Wu
-excerpt: "A quick tip for resolving a warning message from snipMate"
+excerpt: A quick tip for resolving a warning message from snipMate
 ---
 
 If you use both Vim and snipMate, and upgraded snipMate to the latest version

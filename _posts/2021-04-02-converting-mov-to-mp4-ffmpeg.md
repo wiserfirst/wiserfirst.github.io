@@ -12,7 +12,7 @@ header:
   caption: >
     Image by [Andres Iga](https://unsplash.com/@andresiga?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
     from [Unsplash](https://unsplash.com/s/photos/movie?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
-excerpt: "Explore a great cli tool for converting between video formats"
+excerpt: Explore a great cli tool for converting between video formats
 ---
 
 Since I have a camera that captures video in Quicktime movie format, I end up

@@ -12,7 +12,7 @@ header:
   caption: >
     Image by [Reza Namdari](https://unsplash.com/@rezanamdari?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
     from [Unsplash](https://unsplash.com/s/photos/programming?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
-excerpt: "Discover a fantastic version manager for programming languages"
+excerpt: Discover a fantastic version manager for programming languages
 ---
 
 Last year, I wrote a post titled [Install Java with asdf] and slightly
