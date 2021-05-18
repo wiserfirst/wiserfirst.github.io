@@ -1,8 +1,8 @@
 ---
 title: "API Mocking with Prism"
 date: 2020-07-18 18:31:00 +1000
-last_modified_at: 2021-05-18 10:20:00 +1000
-tags: mocking prism
+last_modified_at: 2021-05-18 10:39:00 +1000
+tags: OpenAPI mocking prism Postman
 header:
   image: /assets/images/2021-05-18/prism_1440_600.jpg
   image_description: "A prism on a mirror"
@@ -22,18 +22,17 @@ Unfortunately, for some reason we do not yet have access to a sandbox
 environment. Didn't want to be blocked by this, we decided to build a local
 mocked API server.
 
-Luckily for us, we were able to find an [OpenAPI][] specification file for the
-API of this service and also discovered an excellent tool called [Prism][] for
-creating a mock server out of that. This offers a very simple way to
-spin up a local mock server with all the endpoints mocked. And with minimal
-changes to the specification file, the ability to send back custom
-responses if necessary.
+Luckily for us, we were able to find an [OpenAPI] specification file for the API
+of this service and also discovered an excellent tool called [Prism] for
+creating a mock server out of that. This offers a very simple way to spin up a
+local mock server with all the endpoints mocked. And with minimal changes to the
+specification file, the ability to send back custom responses if necessary.
 
 ## Setup
 
-In this post, I'll use the OpenAPI [specification file][] of the [PetStore API][]
-to demonstrate what [Prism][] has to offer. Please download it as well if you'd
-like to follow along.
+In this post, I'll use the OpenAPI [specification file] of the [PetStore API] to
+demonstrate what Prism has to offer. Please download it as well if you'd like to
+follow along.
 
 ```bash
 curl -o petstore.json https://raw.githubusercontent.com/api-evangelist/swagger/master/dev-api-openapi.json
@@ -42,7 +41,7 @@ curl -o petstore.json https://raw.githubusercontent.com/api-evangelist/swagger/m
 > Note: The OpenAPI specification can be in JSON or YAML formats, but I'm be
 > using JSON in this post.
 
-You'll also need to install the [prism npm package][] by
+You'll also need to install the [prism npm package] by
 
 ```bash
 npm install -g @stoplight/prism-cli
@@ -107,14 +106,14 @@ endpoint, it would involve adding the following under `paths` -> `/pet/{petId}`
 
 Of course there are a lot more you could do with the specification file. I'm
 just scratching the surface here. Please refer to the [Responses Object
-Example][] section in the OpenAPI Specification for more information.
+Example] section in the OpenAPI Specification for more information.
 
 ## Send Requests
 
 Now that we have a local mock server with a butch of endpoints, and the
 capability of returning desired example responses, it's time to send some sample
 requests. Surely creating all the requests manually in your favorite HTTP client
-would work, but if you use [Postman][], there is a better alternative. Postman
+would work, but if you use [Postman], there is a better alternative. Postman
 can directly import the OpenAPI specification file and create a new collection
 with requests for each endpoint. After that you might still need to fill in some
 variables like `baseUrl` for all endpoints or `petId` for the `/pet/:petId`
@@ -124,9 +123,9 @@ saves a lot of effort.
 Please refer to the screenshots below:
 
 * Postman Environment Configuration
-![environment configuration][]
+![environment configuration]
 * get `/pet/:petId/` endpoint
-![get endpoint example][]
+![get endpoint example]
 
 ## Warning before Celebration
 
