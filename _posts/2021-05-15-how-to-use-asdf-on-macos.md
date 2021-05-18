@@ -456,7 +456,7 @@ consider.
 [Add to your Shell]: https://asdf-vm.com/#/core-manage-asdf?id=add-to-your-shell
 [Common Homebrew issues]: https://github.com/asdf-vm/asdf/issues/785
 [Github repository]: https://github.com/asdf-vm/asdf/tags
-[Install Java with asdf]: https://www.wiserfirst.com/blog/install-java-with-asdf/
+[Install Java with asdf]: /blog/install-java-with-asdf/
 [asdf documentation]: https://asdf-vm.com/#/core-manage-asdf
 [asdf plugins repository]: https://asdf-vm.com/#/plugins-all
 [create a plugin]: https://asdf-vm.com/#/plugins-create
