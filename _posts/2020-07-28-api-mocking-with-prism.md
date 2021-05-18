@@ -1,7 +1,20 @@
 ---
 title: "API Mocking with Prism"
 date: 2020-07-18 18:31:00 +1000
+last_modified_at: 2021-05-18 10:20:00 +1000
 tags: mocking prism
+header:
+  image: /assets/images/2021-05-18/prism_1440_600.jpg
+  image_description: "A prism on a mirror"
+  teaser: /assets/images/2021-05-18/prism_1440_600.jpg
+  overlay_image: /assets/images/2021-05-18/prism_1440_600.jpg
+  overlay_filter: 0.4
+  caption: >
+    Image by [Michael Dziedzic](https://unsplash.com/@lazycreekimages?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
+    from [Unsplash](https://unsplash.com/s/photos/prism?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
+excerpt: >
+  Want to start integration before having access to the API? Mocking is the way
+  to go
 ---
 
 Recently my team has been working on API integration with a third party service.

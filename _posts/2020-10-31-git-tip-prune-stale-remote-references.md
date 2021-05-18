@@ -12,7 +12,7 @@ header:
   caption: >
     Image by [Yancy Min](https://unsplash.com/@yancymin?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
     from [Unsplash](https://unsplash.com/s/photos/git?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
-excerpt: "A Git tip that I didn't know before and I find it very useful at times"
+excerpt: A Git tip that I didn't know before and I find it very useful at times
 ---
 
 When a colleague pushes a new branch to Github, we can run the following to get
