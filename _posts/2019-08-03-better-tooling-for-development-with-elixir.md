@@ -1,7 +1,20 @@
 ---
 title: "Better Tooling for Development with Elixir"
 date: "2019-08-03 10:00:00 +1000"
+last_modified_at: 2021-05-19 11:15:00 +1000
 tags: elixir credo git_hooks
+header:
+  image: /assets/images/2021-05-19/elixir_1440_400.jpg
+  image_description: "Elixir on White Background"
+  teaser: /assets/images/2021-05-19/elixir_1440_400.jpg
+  overlay_image: /assets/images/2021-05-19/elixir_1440_400.jpg
+  overlay_filter: 0.3
+  caption: >
+    Image by [CHUTTERSNAP](https://unsplash.com/@chuttersnap)
+    from [Unsplash](https://unsplash.com/photos/hqVGQ4-D0NI)
+excerpt: >
+  Chinese proverb: craftsmen must first sharpen their tools before they can do a
+  good job
 ---
 
 We ❤️ Elixir, so we want to the development process as smooth as possible.
@@ -17,12 +30,10 @@ for you too.
 
 ## Format Elixir code
 
-In [Elixir
-1.6](https://elixir-lang.org/blog/2018/01/17/elixir-v1-6-0-released/), a very
-nice code formatter has been provided, which could format your code
-automatically without changing the semantics. So it helps a great deal in
-keeping the code style consistent across the whole codebase or even multiple
-codebases.
+In [Elixir 1.6], a very nice code formatter has been provided, which could
+format your code automatically without changing the semantics. So it helps a
+great deal in keeping the code style consistent across the whole codebase or
+even multiple codebases.
 
 Without any setup, you can run `mix format file1 file2 ...` to format a few
 individual Elixir source files. Or if you want to format all files in a repo
@@ -41,9 +52,7 @@ of file paths and patterns under the `inputs` key. For example:
 
 will capture all Elixir files in a typical umbrella project. As you can see,
 wildcards are supported in the file patterns and they are expanded with
-`Path.wildcard/2`. Please refer to [mix format
-documentation](https://hexdocs.pm/mix/master/Mix.Tasks.Format.html) for more
-details.
+`Path.wildcard/2`. Please refer to [mix format documentation] for more details.
 
 ## Check format with Git pre-commit hook
 
@@ -87,9 +96,9 @@ formatting Elixir code too and Google is your friend.
 
 ## Leverage mix aliases
 
-[mix aliases](https://hexdocs.pm/mix/Mix.html#module-aliases) can be very useful
-in running the same group of tasks over and over again. For example, in the top
-level `mix.exs` file, we have the following aliases defined:
+[mix aliases] can be very useful in running the same group of tasks over and
+over again. For example, in the top level `mix.exs` file, we have the following
+aliases defined:
 
 ```elixir
 defmodule OurProject.Mixfile do
@@ -136,9 +145,8 @@ mix credo -a --strict
 all in `test` env. Only caveat of setting aliases like this is that any test
 file paths with optional line number passed in as command line arguments are
 ignored and I haven't quite figured out how to get around that. Another thing
-worth noting is the last step, namely `mix credo -a --strict`, will use
-[credo](https://github.com/rrrene/credo) to run static code analysis and thus
-keep the style consistent.
+worth noting is the last step, namely `mix credo -a --strict`, will use [credo]
+to run static code analysis and thus keep the style consistent.
 
 Of course you could setup different aliases to suit your needs.
 
@@ -165,8 +173,7 @@ mix format --check-formatted
 mix test
 ```
 
-If you are curious about what does `set -euxo pipefile` do,
-[explainshell.com](https://explainshell.com/explain?cmd=set+-euxo+pipefail)
+If you are curious about what does `set -euxo pipefile` do, [explainshell.com]
 might be helpful.
 
 Of course there are cases where one might want to push potentially failing code
@@ -180,7 +187,8 @@ git push origin your-remote-branch --no-verify
 
 If you, like me, also use GUI Git clients like SourceTree to add commits, you'll
 notice that the formatting check is skipped. As Sindre Sorhus pointed out in
-[this SO answer](https://stackoverflow.com/a/17557522/1228752), this is due to:
+[this StackOverflow answer], this is due to:
+
 > GUI apps on OS X doesn't load the stuff in `.bashrc/.bash_profile`, which
 > means they won't have user specified `$PATH` additions like `/usr/local/bin`,
 > which is where the grunt binary is. You can either specify the full path or
@@ -195,8 +203,7 @@ should work better. For example, setting the following in the `pre-commit` hook
 PATH="/Users/$(whoami)/.asdf/shims:/usr/local/bin:$PATH"
 ```
 
-should work for Elixir installed either with
-[asdf](https://github.com/asdf-vm/asdf) or homebrew.
+should work for Elixir installed either with [asdf] or homebrew.
 
 ## Same Git hooks for the team
 
@@ -223,5 +230,14 @@ article can offer some hints on how you could archive your similar needs.
 
 ## Acknowledgement
 
-Special thanks to [Paul Fioravanti](https://twitter.com/paulfioravanti) for his
-great feedback to my first draft, which made this article much better.
+Special thanks to [Paul Fioravanti] for his great feedback to my first draft,
+which made this article much better.
+
+[Elixir 1.6]: https://elixir-lang.org/blog/2018/01/17/elixir-v1-6-0-released/
+[Paul Fioravanti]: https://twitter.com/paulfioravanti
+[asdf]: https://github.com/asdf-vm/asdf
+[credo]: https://github.com/rrrene/credo
+[explainshell.com]: https://explainshell.com/explain?cmd=set+-euxo+pipefail
+[mix aliases]: https://hexdocs.pm/mix/Mix.html#module-aliases
+[mix format documentation]: https://hexdocs.pm/mix/master/Mix.Tasks.Format.html
+[this StackOverflow answer]: https://stackoverflow.com/a/17557522/1228752
