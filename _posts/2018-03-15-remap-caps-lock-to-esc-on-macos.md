@@ -2,7 +2,7 @@
 title: "Remap Caps Lock to ESC on macOS"
 date: "2018-03-15 10:00:00 +1100"
 last_modified_at: 2021-05-19 16:36:00 +1000
-tags: macos
+tags: macos tiny-tips
 header:
   image: /assets/images/2021-05-19/macbook_keyboard_1440_400.jpg
   image_description: "Macbook Keyboard"
