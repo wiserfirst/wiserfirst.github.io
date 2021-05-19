@@ -1,7 +1,18 @@
 ---
 title: "Restore Gem to Original State after Bundle Open"
 date: "2017-12-19 10:00:00 +1100"
+last_modified_at: 2021-05-19 16:45:00 +1000
 tags: ruby bundle gem
+header:
+  image: /assets/images/2021-05-19/gemstone_1440_420.jpg
+  image_description: "Red Gemstone"
+  teaser: /assets/images/2021-05-19/gemstone_1440_420.jpg
+  overlay_image: /assets/images/2021-05-19/gemstone_1440_420.jpg
+  overlay_filter: 0.1
+  caption: >
+    Image by [Joshua Fuller](https://unsplash.com/@joshuafuller)
+    from [Unsplash](https://unsplash.com/photos/p8w7krXVY1k)
+excerpt: Experiment with Ruby Gems safely without messing it up
 ---
 
 When trying to understand how a gem works,
