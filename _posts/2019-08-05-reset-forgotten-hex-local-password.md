@@ -2,7 +2,7 @@
 title: "Reset Forgotten Hex Local Password"
 date: "2019-08-05 10:00:00 +1000"
 last_modified_at: 2021-05-19 10:38:00 +1000
-tags: hex
+tags: hex tiny-tips
 header:
   image: /assets/images/2021-05-19/blue_flowers_1440_430.jpg
   image_description: "Blue flowers"

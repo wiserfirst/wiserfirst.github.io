@@ -2,7 +2,7 @@
 title: "Make a Shell Command Always Succeed"
 date: "2019-07-20 10:00:00 +1000"
 last_modified_at: 2021-05-19 12:05:00 +1000
-tags: linux bash
+tags: linux bash tiny-tips
 header:
   image: /assets/images/2021-05-19/golden_hour_1440_400.jpg
   image_description: "People Facing Golden Hour"
