@@ -74,12 +74,12 @@ during focused mode studies earlier.
 All the textbooks say that you get all your neurons at birth. When you grow up,
 new neural connections are made, but no new neurons are generated in the brain.
 The neurons may die, which means you have a shrinking cortex. But Rusty Gage
-discovered new neurons are born in the Hippocampus of a adult brain. The
+discovered new neurons are born in the Hippocampus of an adult brain. The
 conditions being: a) an enriched environment, where you can communicate with
 other people and actively participate in events; or b) physical exercise.
 Exercises not only help make the body stronger, but also help the Hippocampus to
 give birth to new neurons and provide time for the brain to operate in diffused
-mode, which in turn benefit your learning.
+mode, which in turn benefits your learning.
 
 [Barbara Oakley]: https://twitter.com/barbaraoakley
 [Learning How to Learn]: https://www.coursera.org/learn/learning-how-to-learn
