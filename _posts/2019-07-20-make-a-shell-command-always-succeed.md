@@ -1,7 +1,18 @@
 ---
 title: "Make a Shell Command Always Succeed"
 date: "2019-07-20 10:00:00 +1000"
+last_modified_at: 2021-05-19 12:05:00 +1000
 tags: linux bash
+header:
+  image: /assets/images/2021-05-19/golden_hour_1440_400.jpg
+  image_description: "People Facing Golden Hour"
+  teaser: /assets/images/2021-05-19/golden_hour_1440_400.jpg
+  overlay_image: /assets/images/2021-05-19/golden_hour_1440_400.jpg
+  overlay_filter: 0.3
+  caption: >
+    Image by [Guille Álvarez](https://unsplash.com/@guillealvarez)
+    from [Unsplash](https://unsplash.com/photos/IcI3FizU9Cw)
+excerpt: Never give up, until you succeed
 ---
 
 In bash and many other shells, zero is called successful exit status code,
