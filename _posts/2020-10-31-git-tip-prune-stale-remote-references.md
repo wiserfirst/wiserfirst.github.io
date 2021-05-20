@@ -50,7 +50,7 @@ git remote show origin
 
 After sharing my findings with my colleagues, they pointed out that passing the
 `--prune` option to `git pull` or `git fetch` would do the trick as well. As
-mentioned in this nice [tutorial for git prune], the following:
+mentioned in this nice [tutorial for git prune][], the following:
 
 ```bash
 git fetch --prune

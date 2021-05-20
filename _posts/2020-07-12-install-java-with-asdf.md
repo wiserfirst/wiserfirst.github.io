@@ -25,7 +25,7 @@ downright impossible. For that reason, I generally use a tool called asdf to
 manage the installations of programming languages.
 
 If you don't already have it and want to give it a go, the [asdf installation
-instructions] for macOS and Linux on their website should be handy. Once you
+instructions][] for macOS and Linux on their website should be handy. Once you
 have asdf, installing a version of Java, or most popular programming languages,
 should be reasonably painless.
 
@@ -49,7 +49,7 @@ asdf list-all java
 If you, like me, haven't followed the development of Java over the past decade,
 you might be surprised by the number of options for Java with asdf. Among them,
 OpenJDK is Oracle's open source implementation of Java Standard Edition.
-According to [this StackOverflow Answer], Oracle stopped offering downloads of
+According to [this StackOverflow Answer][], Oracle stopped offering downloads of
 Java 8/9/10, which is why there is the AdoptOpenJDK project. Since I'm not
 exactly an expert on Java, if you'd like to know more, my friend, Google is a
 good starting point.
@@ -83,7 +83,7 @@ following:
 . ~/.asdf/plugins/java/set-java-home.zsh
 ```
 
-Refer to [asdf-java documentation] for Bash or Fish shells.
+Refer to [asdf-java documentation][] for Bash or Fish shells.
 
 ### Summary
 
