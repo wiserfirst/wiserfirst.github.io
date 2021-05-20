@@ -1,12 +1,23 @@
 ---
 title: "Making My First Contribution to the Phoenix Framework"
 date: "2015-10-17 10:00:00 +1100"
+last_modified_at: 2021-05-20 18:10:00 +1000
 tags: phoenix elixir mix bootstrap
+header:
+  image: /assets/images/2021-05-20/phoenix_1280_430.jpg
+  image_description: "Phoenix in Fire"
+  teaser: /assets/images/2021-05-20/phoenix_1280_430.jpg
+  overlay_image: /assets/images/2021-05-20/phoenix_1280_430.jpg
+  overlay_filter: 0.4
+  caption: >
+    Image by [skylarvision](https://pixabay.com/users/skylarvision-2957633/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=2877486)
+    from [Pixabay](https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=2877486)
+excerpt: A journey of a thousand miles begins with a single step
 ---
 
 To me the idea of contributing to a popular open source project, feels exciting
 and intimidating at the same time, since I've never done that before (except for
-improving the document/guides) and not sure know where to start.
+improving the documentation/guides) and not sure know where to start.
 
 But a few hours ago, my first commit to the Phoenix framework got merged, which
 made me technically a contributor. I just updated the version of Bootstrap in a
@@ -37,8 +48,8 @@ installing Phoenix. So there must be some clue in what this task would do, which
 should involve copying files from the Phoenix to a newly generated app. Let's
 look into that. I already know mix is a task runner (and more) for Elixir, just
 like Rake is to Ruby and we can add new tasks for it to run. But unfortunately,
-I don't know yet how to define a mix task. Time to consult the [document for Mix
-task](https://hexdocs.pm/mix/Mix.Task.html):
+I don't know yet how to define a mix task. Time to consult the [documentation
+for Mix task][]:
 
 > A simple module that provides conveniences for creating, loading and
 > manipulating tasks.
@@ -170,18 +181,16 @@ in a new Phoenix app.
 
 Actually editing the file is really simple: just delete the older version of
 Bootstrap in `installer/templates/static/app.css` and paste in the [latest
-version of Bootstrap](http://getbootstrap.com/getting-started/#download). And of
-course make sure the tests still pass and verify the home page of a new Phoenix
-app still looks the same as before.
+version of Bootstrap][]. And of course make sure the tests still pass and verify
+the home page of a new Phoenix app still looks the same as before.
 
 ## Verification
 
 You can run the tests by `mix test` in root directory of Phoenix source code,
 which is pretty simple. But for verifying the home page after my updates, I need
 to briefly review how Phoenix was installed. As of today, the latest version of
-Phoenix is 1.0.3 and according to the [Installation
-Guide](https://hexdocs.pm/phoenix/installation.html), it can be installed by
-running:
+Phoenix is 1.0.3 and according to the [Installation Guide][], it can be
+installed by running:
 
 ```bash
 mix archive.install https://github.com/phoenixframework/phoenix/releases/download/v1.0.3/phoenix_new-1.0.3.ez
@@ -235,11 +244,10 @@ drwxr-xr-x  5 wiser  staff   170B Oct 16 11:06 test
 As expected, the installer archive is built like this, so my guess was
 confirmed.
 
-According to the document of
-[Mix.Tasks.Archive](https://hexdocs.pm/mix/1.2.6/Mix.Tasks.Archive.html),
-archives are by default installed at `~/.mix/archives`, and that's why mix tasks
-from the installed archives are available system wide. We can list the archives
-currently installed by:
+According to the documentation of [Mix.Tasks.Archive][], archives are by default
+installed at `~/.mix/archives`, and that's why mix tasks from the installed
+archives are available system wide. We can list the archives currently installed
+by:
 
 ```bash
 ~  mix archive
@@ -299,3 +307,8 @@ more understanding about how Phoenix and Mix works. I now know:
 
 I belief this new knowledge will be helpful for using Phoenix as well as for
 making more contributions to it.
+
+[Installation Guide]: https://hexdocs.pm/phoenix/installation.html
+[Mix.Tasks.Archive]: https://hexdocs.pm/mix/1.2.6/Mix.Tasks.Archive.html
+[documentation for Mix task]: https://hexdocs.pm/mix/Mix.Task.html
+[latest version of Bootstrap]: http://getbootstrap.com/getting-started/#download
