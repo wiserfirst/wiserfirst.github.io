@@ -5,13 +5,13 @@ last_modified_at: 2021-05-18 23:43:00 +1000
 tags: java asdf
 header:
   image: /assets/images/2021-05-18/east_java_1440_450.jpg
-  image_description: "A prism on a mirror"
+  image_description: "Baluran National Park, East Java"
   teaser: /assets/images/2021-05-18/east_java_1440_450.jpg
   overlay_image: /assets/images/2021-05-18/east_java_1440_450.jpg
   overlay_filter: 0.3
   caption: >
     Image by [Hanandito Adi](https://unsplash.com/@hndi?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
-    from [Unsplash](https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
+    from [Unsplash](https://unsplash.com/photos/2j3nEOWjEwA)
 excerpt: >
   Getting Java installed on macOS or Linux can be painless if you have chosen
   the right tool
