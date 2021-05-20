@@ -30,7 +30,7 @@ for you too.
 
 ## Format Elixir code
 
-In [Elixir 1.6], a very nice code formatter has been provided, which could
+In [Elixir 1.6][], a very nice code formatter has been provided, which could
 format your code automatically without changing the semantics. So it helps a
 great deal in keeping the code style consistent across the whole codebase or
 even multiple codebases.
@@ -52,7 +52,8 @@ of file paths and patterns under the `inputs` key. For example:
 
 will capture all Elixir files in a typical umbrella project. As you can see,
 wildcards are supported in the file patterns and they are expanded with
-`Path.wildcard/2`. Please refer to [mix format documentation] for more details.
+`Path.wildcard/2`. Please refer to [mix format documentation][] for more
+details.
 
 ## Check format with Git pre-commit hook
 
@@ -96,7 +97,7 @@ formatting Elixir code too and Google is your friend.
 
 ## Leverage mix aliases
 
-[mix aliases] can be very useful in running the same group of tasks over and
+[mix aliases][] can be very useful in running the same group of tasks over and
 over again. For example, in the top level `mix.exs` file, we have the following
 aliases defined:
 
@@ -145,8 +146,8 @@ mix credo -a --strict
 all in `test` env. Only caveat of setting aliases like this is that any test
 file paths with optional line number passed in as command line arguments are
 ignored and I haven't quite figured out how to get around that. Another thing
-worth noting is the last step, namely `mix credo -a --strict`, will use [credo]
-to run static code analysis and thus keep the style consistent.
+worth noting is the last step, namely `mix credo -a --strict`, will use
+[credo][] to run static code analysis and thus keep the style consistent.
 
 Of course you could setup different aliases to suit your needs.
 
@@ -173,7 +174,7 @@ mix format --check-formatted
 mix test
 ```
 
-If you are curious about what does `set -euxo pipefile` do, [explainshell.com]
+If you are curious about what does `set -euxo pipefile` do, [explainshell.com][]
 might be helpful.
 
 Of course there are cases where one might want to push potentially failing code
@@ -187,7 +188,7 @@ git push origin your-remote-branch --no-verify
 
 If you, like me, also use GUI Git clients like SourceTree to add commits, you'll
 notice that the formatting check is skipped. As Sindre Sorhus pointed out in
-[this StackOverflow answer], this is due to:
+[this StackOverflow answer][], this is due to:
 
 > GUI apps on OS X doesn't load the stuff in `.bashrc/.bash_profile`, which
 > means they won't have user specified `$PATH` additions like `/usr/local/bin`,
@@ -203,7 +204,7 @@ should work better. For example, setting the following in the `pre-commit` hook
 PATH="/Users/$(whoami)/.asdf/shims:/usr/local/bin:$PATH"
 ```
 
-should work for Elixir installed either with [asdf] or homebrew.
+should work for Elixir installed either with [asdf][] or homebrew.
 
 ## Same Git hooks for the team
 
@@ -230,7 +231,7 @@ article can offer some hints on how you could archive your similar needs.
 
 ## Acknowledgement
 
-Special thanks to [Paul Fioravanti] for his great feedback to my first draft,
+Special thanks to [Paul Fioravanti][] for his great feedback to my first draft,
 which made this article much better.
 
 [Elixir 1.6]: https://elixir-lang.org/blog/2018/01/17/elixir-v1-6-0-released/

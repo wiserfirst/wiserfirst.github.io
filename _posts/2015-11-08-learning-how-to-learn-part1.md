@@ -17,9 +17,9 @@ excerpt: >
   from learning how to learn first
 ---
 
-Last week, I discovered a wonderful course, [Learning How to Learn], from UC San
-Diego on Coursera. This course was taught by two prestigious scientists in
-neuroscience, [Barbara Oakley] and [Terrence Sejnowski]. After following the
+Last week, I discovered a wonderful course, [Learning How to Learn][], from UC
+San Diego on Coursera. This course was taught by two prestigious scientists in
+neuroscience, [Barbara Oakley][] and [Terrence Sejnowski][]. After following the
 material from the first week, I feel the urge to take some notes of my own
 understanding.
 

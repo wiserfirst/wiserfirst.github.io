@@ -20,7 +20,7 @@ Elixir. Since I don't have any Lisp background, that's a whole new concept for
 me.
 
 But yesterday, after reading the relevant section in [Elixir's getting started
-guild], I suddenly realised how `quote` and `unquote` work. First of all, an
+guild][], I suddenly realised how `quote` and `unquote` work. First of all, an
 Elixir expression is internally represented as a tuple with three elements,
 which is Elixir's version of the Abstract Syntax Tree (AST). `quote` can give
 you the AST representation of a piece of code, so that you can manipulate later.

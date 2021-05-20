@@ -27,7 +27,7 @@ the original videos and downloading the resulting videos would take a long time,
 especially considering I have multiple videos that are several Gigabytes. So the
 online tools aren't right for me.
 
-Luckily there is a neat cli tool named [ffmpeg] that can do the trick. If you
+Luckily there is a neat cli tool named [ffmpeg][] that can do the trick. If you
 don't already have it, you can install (on macOS) by
 
 ```sh
@@ -35,7 +35,7 @@ brew install ffmpeg
 ```
 
 Or if you are on Linux, most likely you can install it with your package
-manager; if not, go to its [download page] to find the appropriate installer.
+manager; if not, go to its [download page][] to find the appropriate installer.
 
 To convert a .mov file to .mp4, you can run
 
@@ -43,7 +43,7 @@ To convert a .mov file to .mp4, you can run
 ffmpeg -i input-video-name.mov -vcodec h264 output-video-name.mp4
 ```
 
-For more details, please refer to the [ffmpeg documentation].
+For more details, please refer to the [ffmpeg documentation][].
 
 This is good enough if there are only a handful of videos to convert, but it can
 become tedious to run the command manually for say 20 videos. So I created a

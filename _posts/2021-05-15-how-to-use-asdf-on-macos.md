@@ -15,7 +15,7 @@ header:
 excerpt: Discover a fantastic version manager for programming languages
 ---
 
-Last year, I wrote a post titled [Install Java with asdf] and slightly
+Last year, I wrote a post titled [Install Java with asdf][] and slightly
 surprising to me, it ended up becoming the most visited article on my personal
 blog. Given that, I decided to write another more complete guide to asdf. Even
 though this guide is meant for macOS, most things covered here should apply to
@@ -30,9 +30,9 @@ on Rails and frontend React. There are quite a number of repositories for
 different services and unsurprisingly not all of them use the same versions of
 Ruby or Node.js.
 
-To manage the different versions of Ruby, [rbenv] is a good tool and for
-Node.js, you have [nvm]. Then Python is introduced for some machine learning
-related tasks, so here comes [pyenv].
+To manage the different versions of Ruby, [rbenv][] is a good tool and for
+Node.js, you have [nvm][]. Then Python is introduced for some machine learning
+related tasks, so here comes [pyenv][].
 
 Three tools to manage versions for three programming languages doesn't sound too
 bad, but they all have slightly different command syntax for you to remember and
@@ -53,7 +53,7 @@ manage versions of almost all programming languages that you might want to use.
 And with asdf you only need to learn one set of simple commands to do that.
 
 Furthermore, if you'd like to manage something and there isn't yet a plugin for
-it, it's possible to [create a plugin] yourself.
+it, it's possible to [create a plugin][] yourself.
 
 With a relatively small core and the powerful plugin system, asdf offers nearly
 infinite possibilities.
@@ -78,7 +78,7 @@ git clone https://github.com/asdf-vm/asdf.git ~/.asdf --branch v0.8.0
 ```
 
 `v0.8.0` is the latest tag as of May 2021, but obviously that would change
-over time, so make sure to check its [Github repository] for that before you
+over time, so make sure to check its [Github repository][] for that before you
 install.
 
 Then for Zsh add the following to the bottom of `~/.zshrc`:
@@ -98,7 +98,7 @@ brew install asdf
 ```
 
 If you prefer this method, before continuing, do check out [Common Homebrew
-issues] to be aware of potential issues you might run into.
+issues][] to be aware of potential issues you might run into.
 
 And add the following line to the bottom of your `~/.zshrc`:
 
@@ -106,8 +106,8 @@ And add the following line to the bottom of your `~/.zshrc`:
 . $(brew --prefix asdf)/asdf.sh
 ```
 
-> If you use Bash or Fish shell, please refer to the [Add to your Shell] section
-> in asdf documentation for instructions.
+> If you use Bash or Fish shell, please refer to the [Add to your Shell][]
+> section in asdf documentation for instructions.
 
 ## Manage Plugins
 
@@ -115,9 +115,9 @@ Before you could install Ruby, Node.js or anything else, you'll need to add the
 appropriate plugins. Plugins are how asdf understands handling of different
 programming languages or, say, packages.
 
-There is an [asdf plugins repository] and for all the plugins listed there, you
-can add with just the plugin name. For example, here is how to add the plugins
-for Ruby and Node.js:
+There is an [asdf plugins repository][] and for all the plugins listed there,
+you can add with just the plugin name. For example, here is how to add the
+plugins for Ruby and Node.js:
 
 ```sh
 asdf plugin add ruby
@@ -252,9 +252,9 @@ all) the situations they'll ever encounter.
     <img src="/assets/images/2021-05-15/underhood_1024_540.jpg"
          alt="Mustang car with open hood" />
     <figcaption style="text-align: center;">
-      Blue Mustang Coupe with Hood Open at
-      <a href="https://unsplash.com/photos/HAI-GVIEvSQ">Unsplash</a>
-      by <a href="https://unsplash.com/@aliivan">Alison Ivansek</a>
+      Blue Mustang Coupe with Hood Open by
+      <a href="https://unsplash.com/@aliivan">Alison Ivansek</a>
+      from <a href="https://unsplash.com/photos/HAI-GVIEvSQ">Unsplash</a>
     </figcaption>
   </figure>
 </div>
@@ -301,8 +301,7 @@ control system you use.
 
 On the other hand, if your team hasn't reached an agreement on adopting asdf,
 I'd recommend adding it to `.gitignore` and keeping it locally without
-committing to version control. The [Migrate from Legacy
-Tools](/blog/how-to-use-asdf-on-macos/#migrate-from-legacy-tools) section might
+committing to version control. The [Migrate from Legacy Tools][] section might
 offer more useful information, if you found yourself in situations like this.
 
 ### Shell Versions
@@ -443,7 +442,7 @@ In this post, I covered:
 While there are definitely aspects of asdf that I didn't cover, this should be a
 solid starting point for someone new. After reading this post and following
 along, you should be able to start using asdf with confidence. If you do run
-into issues, check out [asdf documentation] and Google is your friend.
+into issues, check out [asdf documentation][] and Google is your friend.
 
 With asdf, one could manage different versions of all the programming languages
 that they might need without any trouble, and also it makes sharing a common set
@@ -457,6 +456,7 @@ consider.
 [Common Homebrew issues]: https://github.com/asdf-vm/asdf/issues/785
 [Github repository]: https://github.com/asdf-vm/asdf/tags
 [Install Java with asdf]: /blog/install-java-with-asdf/
+[Migrate from Legacy Tools]: /blog/how-to-use-asdf-on-macos/#migrate-from-legacy-tools
 [asdf documentation]: https://asdf-vm.com/#/core-manage-asdf
 [asdf plugins repository]: https://asdf-vm.com/#/plugins-all
 [create a plugin]: https://asdf-vm.com/#/plugins-create

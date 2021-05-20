@@ -29,11 +29,11 @@ After some googling, I found out the local password is stored in
 `~/.hex/hex.config` file. Considering it's set during hex user authentication
 (`mix hex.user auth`), it occurred to me that deleting the config file and
 re-authenticating with hex.pm account might help. And it actually did! I was
-able to set a new local password and publish [my first hex package], even though
-it's pretty much just for demonstration purpose.
+able to set a new local password and publish [my first hex package][], even
+though it's pretty much just for demonstration purpose.
 
-Interested to learn more about hex? You might find [Become a Hex Power User] by
-Todd Resudek a good read.
+Interested to learn more about hex? You might find [Become a Hex Power User][]
+by Todd Resudek a good read.
 
 [Become a Hex Power User]: https://medium.com/@toddresudek/hex-power-user-deb608e60935
 [my first hex package]: https://hex.pm/packages/leapyear

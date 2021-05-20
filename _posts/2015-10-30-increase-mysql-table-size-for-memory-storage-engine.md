@@ -24,8 +24,8 @@ long wait, MySQL gave a table full error.
 So I've got a problem to solve. Connect to the test database, check the table
 size, which is 16M; but in development database, with InnoDB engine, that table
 is just 1.5M. Then I noticed the storage engine of the test db was Memory. After
-some Googling, I found the relevant section [The MEMORY Storage Engine] in MySQL
-document.
+some Googling, I found the relevant section [The MEMORY Storage Engine][memory
+storage engine] in MySQL documentation.
 
 > The maximum size of MEMORY tables is limited by the `max_heap_table_size`
 > system variable, which has a default value of 16MB.
@@ -44,8 +44,8 @@ Restart MySQL server by running:
 sudo service mysql restart
 ```
 
-And then try again, and ... still doesn't work. Go back to MySQL document and
-look again at the section for option `max_heap_table_size`:
+And then try again, and ... still doesn't work. Go back to MySQL documentation
+and look again at the section for option `max_heap_table_size`:
 
 > This variable is also used in conjunction with `tmp_table_size` to limit the
 > size of internal in-memory tables.
@@ -57,7 +57,8 @@ tmp_table_size=128M
 ```
 
 And restart MySQL and try again, and ... it still doesn't work. After some more
-Googling, I found [this thread] on StackOverflow, which says
+Googling, I found [this answer][StackOverflow answer] on StackOverflow, which
+says
 
 > Add this to `/etc/my.cnf`
 >
@@ -86,5 +87,5 @@ I realised a few things, after spending an hour tackling this issue:
 4. In MySQL configuration file, different sections control different parts of
    MySQL, which is why adding the options to the bottom wouldn't work.
 
-[The MEMORY Storage Engine]: https://dev.mysql.com/doc/refman/5.6/en/memory-storage-engine.html
-[this thread]: http://stackoverflow.com/questions/9842720/how-to-make-the-mysql-memory-engine-store-more-data
+[StackOverflow answer]: https://stackoverflow.com/a/9843090
+[memory storage engine]: https://dev.mysql.com/doc/refman/5.6/en/memory-storage-engine.html
