@@ -9,7 +9,7 @@ header:
   teaser: /assets/images/2021-05-16/vim_1440_400.jpg
   overlay_image: /assets/images/2021-05-16/vim_1440_400.jpg
   overlay_filter: 0.6
-  caption: Coding with Vim by Qing Wu
+  caption: Coding with Vim
 excerpt: A quick tip for resolving a warning message from snipMate
 ---
 
