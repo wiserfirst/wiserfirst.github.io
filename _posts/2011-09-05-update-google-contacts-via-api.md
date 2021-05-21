@@ -1,10 +1,22 @@
 ---
 title: "通过API更新Google账户通讯录"
 date: "2011-09-05 10:00:00 +0800"
+last_modified_at: 2021-05-21 17:36:00 +1000
 tags: Chinese google python
+header:
+  image: /assets/images/2021-05-21/google_sunnyvale_1280_400.jpg
+  image_description: "Google in Sunnyvale"
+  teaser: /assets/images/2021-05-21/google_sunnyvale_1280_400.jpg
+  overlay_image: /assets/images/2021-05-21/google_sunnyvale_1280_400.jpg
+  overlay_filter: 0.5
+  caption: >
+    Image by [Greg Bulla](https://unsplash.com/@gregbulla)
+    from [Unsplash](https://unsplash.com/photos/lKjX3S4pdog)
+excerpt: Being a developer means you can write code to solve your own problems
 ---
 
-之前用的手机是Nokia，为了保存上面的通讯录，我按照[这里](http://www.allaboutsymbian.com/news/item/8922_Google_Sync_Beta_for_SyncML_S6.php)的方法使用Google
+之前用的手机是Nokia，为了保存上面的通讯录，我按照[这里][symbian
+article]的方法使用Google
 Sync将其同步到Google帐户。然后就可以在Gmail的通讯录当中访问了。换了iPhone之后自然要把通讯录从Google帐户同步过来。
 
 步骤如下：
@@ -23,11 +35,11 @@ Sync将其同步到Google帐户。然后就可以在Gmail的通讯录当中访�
 
 那只能尝试着自己动手了。简单分析一下这个问题，应该是把号码标签类型从`Other`改成`Mobile`或者`Home`。登录到Gmail上手动改当然是可以了，不过偶的通讯录有200多条，一个个改太麻烦了。作为程序员，应该尝试自己写代码解决问题，Google应该有提供修改联系人的API。查一下果然有，就是这个[Google
 Contacts
-API](https://developers.google.com/contacts/v3)。Google提供Java、.NET及python等多种语言接口，由于正在自学python，就用它吧。下载[gdata-python-client](https://github.com/google/gdata-python-client)，然后开始研究电话号码及其标签是使用什么数据结构保存的。结果如下：
+API][]。Google提供Java、.NET及python等多种语言接口，由于正在自学python，就用它吧。下载[gdata-python-client][]，然后开始研究电话号码及其标签是使用什么数据结构保存的。结果如下：
 
 * 通讯录条目类型为`class gdata.contacts.data.ContactEntry`；
 * 其中的电话号码字段名为`phone_number`，它是一个list，每个电话号码为list中一项，类型是`class gdata.data.PhoneNumber`；
-* `PhoneNumber`类型的`rel`字段是一个类似于`http://schemas.google.com/g/2005#other`的字符串，保存了号码标签；而是其`text`字段是真正的电话号码，如`13526541245`，但其类型还不是string，需要对其调用`str()`才能得到字符串。
+* `PhoneNumber`类型的`rel`字段是一个类似于`http://schemas.google.com/g/2005#other`的字符串，保存了号码标签；而是其`text`字段是真正的电话号码，如`13526541245`，但其类型还不是`string`，需要对其调用`str()`才能得到字符串。
 
 另外，经验证还发现：在Gmail的通讯录中，号码标签共有9种类型，以下六种可以正确同步到iOS设备的通讯录中
 
@@ -53,3 +65,7 @@ if 号码标签为Other:
 ```
 
 真正实现这个逻辑并没有花多少时间，在Google提供的sample代码里面很容易就改出来了；倒是找表示电话号码的字段名，以及表示号码标签的字段名，花了一些时间。因为Google所提供的库中，类的定义实在是有点复杂——至少对我这个没接触过的新手而言是这样。全部理清头绪以后，回过头想想其实整个过程并不困难，如果对Google的库有些熟悉，应该很快就能搞定的。
+
+[Google Contacts API]: https://developers.google.com/contacts/v3
+[gdata-python-client]: https://github.com/google/gdata-python-client
+[symbian article]: http://www.allaboutsymbian.com/news/item/8922_Google_Sync_Beta_for_SyncML_S6.php
