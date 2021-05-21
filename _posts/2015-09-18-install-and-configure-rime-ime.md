@@ -2,7 +2,7 @@
 title: "神级输入法鼠鬚管的安装和基本配置"
 date: "2015-09-18 10:00:00 +1000"
 last_modified_at: 2021-05-20 21:50:00 +1000
-tag: rime ime
+tags: Chinese rime ime
 header:
   image: /assets/images/2021-05-20/squirrel_1280_400.jpg
   image_description: "Squirrel on a lawn"
