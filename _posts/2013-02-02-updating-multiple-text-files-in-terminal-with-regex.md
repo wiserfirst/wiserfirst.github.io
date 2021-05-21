@@ -1,10 +1,22 @@
 ---
 title: "Updating Multiple Text Files in Terminal with Regular Expression"
 date: "2013-02-02 10:00:00 +0800"
-tags: cygwin linux regex
+last_modified_at: 2021-05-21 15:36:00 +1000
+tags: cygwin linux regex sed
+header:
+  image: /assets/images/2021-05-21/scenic_route_1280_400.jpg
+  image_description: "Scenic Route"
+  teaser: /assets/images/2021-05-21/scenic_route_1280_400.jpg
+  overlay_image: /assets/images/2021-05-21/scenic_route_1280_400.jpg
+  overlay_filter: 0.2
+  caption: >
+    Image by [v2osk](https://unsplash.com/@v2osk)
+    from [Unsplash](https://unsplash.com/photos/1Z2niiBPg5A)
+excerpt: >
+  It is art of Unix for multiple cli tools to work seamlessly in the terminal
 ---
 
-I am trying to do this in Cygwin on windows, but I think it should work just
+I am trying to do this in Cygwin on Windows, but I think it should work just
 fine on Linux. The steps are as listed below.
 
 Find the files needed to be updated (here I want to find all `cshtml` files
