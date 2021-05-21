@@ -1,7 +1,7 @@
 ---
 title: "使用VPS做SSH代理"
 date: "2010-12-29 10:00:00 +0800"
-tags: vps ssh proxy
+tags: Chinese vps ssh proxy
 ---
 
 首先登录到VPS并切换到root帐号（也可以使用sudo命令），然后使用如下命令建立新帐户，专门用于SSH代理：

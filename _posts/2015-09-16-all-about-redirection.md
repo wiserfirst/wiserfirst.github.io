@@ -1,7 +1,18 @@
 ---
 title: "All about Redirection"
 date: "2015-09-16 10:00:00 +1000"
+last_modified_at: 2021-05-21 12:26:00 +1000
 tags: linux redirection
+header:
+  image: /assets/images/2021-05-21/path_in_forest_1280_400.jpg
+  image_description: "Path in Forest"
+  teaser: /assets/images/2021-05-21/path_in_forest_1280_400.jpg
+  overlay_image: /assets/images/2021-05-21/path_in_forest_1280_400.jpg
+  overlay_filter: 0.3
+  caption: >
+    Image by [Zack Silver](https://unsplash.com/@zack_silver)
+    from [Unsplash](https://unsplash.com/photos/5XiJQIvs6AY)
+excerpt: A basic introduction to redirections on Linux
 ---
 
 There are three special file descriptors: stdin, stdout and stderr (std stands

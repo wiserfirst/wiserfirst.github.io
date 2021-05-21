@@ -1,7 +1,7 @@
 ---
 title: "Wordpress用户密码修改"
 date: "2010-12-23 10:00:00 +0800"
-tags: wordpress
+tags: Chinese wordpress
 ---
 
 首先参考这篇文章[《WordPress用户密码算法规则》](http://www.williamlong.info/archives/1978.html)，可了解其密码设置保存的规则。可以通过如下步骤进行密码修改：
