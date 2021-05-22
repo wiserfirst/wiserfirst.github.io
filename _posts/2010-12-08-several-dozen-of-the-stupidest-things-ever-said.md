@@ -1,9 +1,22 @@
 ---
 title: "历史上那些最愚蠢的话"
 date: "2010-12-08 10:00:00 +0800"
+last_modified_at: 2021-05-22 17:26:00 +1000
+tags: quotes
+header:
+  image: /assets/images/2021-05-22/ancient_theater_1280_400.jpg
+  image_description: "Ancient Theater of Epidaurus"
+  teaser: /assets/images/2021-05-22/ancient_theater_1280_400.jpg
+  overlay_image: /assets/images/2021-05-22/ancient_theater_1280_400.jpg
+  overlay_filter: 0.4
+  caption: >
+    Image by [Christos Sakellaridis](https://unsplash.com/@chrisart)
+    from [Unsplash](https://unsplash.com/photos/W_Nu5qW8WVg)
+excerpt: Things usually change much faster than people expect
 ---
 
-本文为翻译，并非原创。出处在此：[SEVERAL DOZEN OF THE STUPIDEST THINGS EVER SAID](http://interstel.net/~jdpaul/stupidity.technology.html)
+本文为翻译，并非原创。出处在此：[SEVERAL DOZEN OF THE STUPIDEST THINGS EVER
+SAID][stupid quotes]
 
 "Computers in the future may weigh no more than 1.5 tons." --Popular Mechanics,
 forecasting the relentless march of science, 1949\
@@ -134,3 +147,5 @@ Ericksen，英国医生，维多利亚女王指定医生，1873
 
 Many thanks to Jody Culham for sending me this (and to Celia Raia, who sent it
 to her).\ 感谢Jody Culham向我发送这些（同时感谢发给她的Celia Raia）
+
+[stupid quotes]: http://interstel.net/~jdpaul/stupidity.technology.html

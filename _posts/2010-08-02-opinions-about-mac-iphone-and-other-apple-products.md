@@ -1,7 +1,18 @@
 ---
 title: "Opinions about Mac, iPhone and Other Apple Products"
 date: "2010-08-02 10:00:00 +0800"
+last_modified_at: 2021-05-22 18:26:00 +1000
 tags: Apple Mac iPhone
+header:
+  image: /assets/images/2021-05-22/apple_store_1280_400.jpg
+  image_description: "Apple Store in Hongkong"
+  teaser: /assets/images/2021-05-22/apple_store_1280_400.jpg
+  overlay_image: /assets/images/2021-05-22/apple_store_1280_400.jpg
+  overlay_filter: 0.4
+  caption: >
+    Image by [Alexandr Bormotin](https://unsplash.com/@bormot)
+    from [Unsplash](https://unsplash.com/photos/ntmu8vCwQE0)
+excerpt: A collection of articles about Apple products
 ---
 
 Many geeks are using Macbook or iMac, and they are sharing their opinions about

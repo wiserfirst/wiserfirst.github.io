@@ -1,7 +1,18 @@
 ---
 title: "关于阿扁这个不靠谱的”理想主义者”"
 date: "2010-08-24 10:00:00 +0800"
+last_modified_at: 2021-05-22 18:36:00 +1000
 tags: Chinese Taiwan
+header:
+  image: /assets/images/2021-05-22/taipei_1280_400.jpg
+  image_description: "Taipei City"
+  teaser: /assets/images/2021-05-22/taipei_1280_400.jpg
+  overlay_image: /assets/images/2021-05-22/taipei_1280_400.jpg
+  overlay_filter: 0.4
+  caption: >
+    Image by [Pitua Sutanto](https://unsplash.com/@bormot)
+    from [Unsplash](https://unsplash.com/photos/FMOf6a96L8M)
+excerpt: Some ranting about former president of Taiwan
 ---
 
 那天在推上看到有人提到龙应台说陈水扁他们，“这些所谓的“理想主义者”也都不可信”。阿扁因为家族弊案受审被羁押，现在无论在台湾还是大陆基本都是属于“过街老鼠，人人喊打”那一类（尽管在台湾还有阿扁的支持者在街头抗议他被羁押），但是关于他贪污弊案以及沦为阶下囚的报道看多了，我却越来越想说说阿扁的正面意义：

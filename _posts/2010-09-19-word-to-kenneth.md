@@ -1,7 +1,18 @@
 ---
 title: "寄语康康"
 date: "2010-09-19 10:00:00 +0800"
-tag: Chinese parenting
+last_modified_at: 2021-05-22 18:03:00 +1000
+tags: Chinese parenting
+header:
+  image: /assets/images/2021-05-22/parent_child_1280_400.jpg
+  image_description: "Parent and child"
+  teaser: /assets/images/2021-05-22/parent_child_1280_400.jpg
+  overlay_image: /assets/images/2021-05-22/parent_child_1280_400.jpg
+  overlay_filter: 0.2
+  caption: >
+    Image by [Ante Hamersmit](https://unsplash.com/@ante_kante)
+    from [Unsplash](https://unsplash.com/photos/vMP8lfhxPi4)
+excerpt: Some words for the next generation
 ---
 
 * 希望你健康快乐的成长，一直能保持一颗童心，保持现在的天真与好奇，无论多大，爸爸都不愿意你变得老于事故、一副犬儒心态。
