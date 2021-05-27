@@ -1,7 +1,7 @@
 ---
 title: "Install Java with asdf"
 date: "2020-07-12 12:30:00 +1000"
-last_modified_at: 2021-05-18 23:43:00 +1000
+last_modified_at: 2021-05-27 14:36:00 +1000
 tags: java asdf
 header:
   image: /assets/images/2021-05-18/east_java_1440_450.jpg
@@ -91,6 +91,13 @@ Hopefully this short introduction to installing Java with asdf could be helpful
 to someone else too. I use asdf to manage all my programming language
 installations (literally one tool to rule them all!) and I love it.
 
+### Update (May 2021)
+
+If you like this short introduction to asdf, I've recently published a more
+complete guide to asdf [How to Use asdf Version Manager on macOS][], which you
+might also find interesting.
+
+[How to Use asdf Version Manager on macOS]: /blog/how-to-use-asdf-on-macos/
 [asdf installation instructions]: https://asdf-vm.com/#/core-manage-asdf-vm
 [asdf-java documentation]: https://github.com/halcyon/asdf-java#java_home
 [this StackOverflow Answer]: https://stackoverflow.com/a/32811065/1228752
