@@ -21,7 +21,7 @@ env:
     # have any that I've created in any pages that I control.
     # Also for some reason, the following sites do not work reliably with
     # htmlproofer, so ignoring them for now
-    - HTMLPROOFER_IGNORE_HREFS="/localhost/,#main,/help.medium.com/,/www.allaboutsymbian.com/,/iteye.com\/blog/,/www.williamlong.info/"
+    - HTMLPROOFER_IGNORE_HREFS="/localhost/,#main,/help.medium.com/,/pixabay.com/,/www.allaboutsymbian.com/,/iteye.com\/blog/,/www.williamlong.info/"
 addons:
   apt:
     packages:
@@ -52,13 +52,13 @@ jobs:
         # NOTE: If a new post is created or new tags are introduced via a post,
         # htmlproofer will need to be disabled for a build in order to proceed
         # forward
-        # - >
-        #   bundle exec htmlproofer _site
-        #   --allow-hash-href
-        #   --assume-extension
-        #   --url-ignore $HTMLPROOFER_IGNORE_HREFS
-        #   --http-status-ignore "999"
-        #   --typhoeus-config '{"ssl_verifypeer": false, "ssl_verifyhost": 0}'
+        - >
+          bundle exec htmlproofer _site
+          --allow-hash-href
+          --assume-extension
+          --url-ignore $HTMLPROOFER_IGNORE_HREFS
+          --http-status-ignore "999"
+          --typhoeus-config '{"ssl_verifypeer": false, "ssl_verifyhost": 0}'
           # --disable-external
       deploy:
         provider: pages
