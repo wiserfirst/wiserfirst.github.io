@@ -213,7 +213,7 @@ their great work.
 [Octopress]: https://github.com/octopress/octopress
 [Paul]: https://twitter.com/paulfioravanti
 [Scribble]: https://github.com/muan/scribble
-[Turndown]: https://domchristie.github.io/turndown/
+[Turndown]: https://mixmark-io.github.io/turndown/
 [Yijun Xu]: https://twitter.com/jun_cn
 [WordPress]: https://wordpress.com/
 [its Github repository]: https://github.com/lonekorean/wordpress-export-to-markdown
