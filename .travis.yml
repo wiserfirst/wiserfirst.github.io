@@ -31,6 +31,7 @@ addons:
 jobs:
   include:
     - stage: Build & Release
+      if: branch = develop
       before_script:
         - npm install --global markdownlint-cli
       script:
@@ -61,10 +62,9 @@ jobs:
           --typhoeus-config '{"ssl_verifypeer": false, "ssl_verifyhost": 0}'
           # --disable-external
       deploy:
+        local_dir: _site
         provider: pages
         strategy: git
         token: $GITHUB_TOKEN
         target_branch: release
         keep_history: true
-        on:
-          branch: develop
