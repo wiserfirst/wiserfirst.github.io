@@ -1,7 +1,7 @@
 ---
 title: "How to Use asdf Version Manager on macOS"
 date: "2021-05-15 19:35:00 +1000"
-last_modified_at: 2021-05-17 21:23:00 +1000
+last_modified_at: 2021-09-05 17:30:00 +1000
 tags: asdf version-manager macos ruby nodejs python
 header:
   image: /assets/images/2021-05-15/coding_1440_400.jpg
@@ -74,10 +74,10 @@ and avoids some pitfalls.
 Cloning the latest tag is enough:
 
 ```sh
-git clone https://github.com/asdf-vm/asdf.git ~/.asdf --branch v0.8.0
+git clone https://github.com/asdf-vm/asdf.git ~/.asdf --branch v0.8.1
 ```
 
-`v0.8.0` is the latest tag as of May 2021, but obviously that would change
+`v0.8.1` is the latest tag as of September 2021, but obviously that would change
 over time, so make sure to check its [Github repository][] for that before you
 install.
 

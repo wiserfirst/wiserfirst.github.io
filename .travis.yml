@@ -21,7 +21,7 @@ env:
     # have any that I've created in any pages that I control.
     # Also for some reason, the following sites do not work reliably with
     # htmlproofer, so ignoring them for now
-    - HTMLPROOFER_IGNORE_HREFS="/localhost/,#main,/help.medium.com/,/pixabay.com/,/www.allaboutsymbian.com/,/iteye.com\/blog/,/www.williamlong.info/"
+    - HTMLPROOFER_IGNORE_HREFS="/localhost/,#main,/help.medium.com/,/pixabay.com/,/www.allaboutsymbian.com/,/iteye.com\/blog/,/www.williamlong.info/,/mademistakes.com/"
 addons:
   apt:
     packages:
