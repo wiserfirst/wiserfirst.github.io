@@ -74,7 +74,8 @@ and adding it to my Github account is necessary.
 ssh-keygen -t ed25519 -C "your_email@example.com"
 ```
 
-Reference: [Generating a new SSH key and adding it to the ssh-agent][Github generate SSH key docs]
+Reference: [Generating a new SSH key and adding it to the ssh-agent][Github
+generate SSH key docs]
 
 ### Add to Github account
 
@@ -170,8 +171,8 @@ git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
   * Trackpad -> Point & Click -> tick "Tap to click"
   * Accessibility -> Pointer Control -> Trackpad Options -> tick "Enable
       dragging" -> three finger drag
-  * (Optional for external monitor) Displays -> (on the external monitor) Option + click "Scaled" and choose
-      2560 x 1440
+  * (Optional for external monitor) Displays -> (on the external monitor)
+      Option + click "Scaled" and choose 2560 x 1440
 
 ## Step 11: Ignore new system update (optional)
 
