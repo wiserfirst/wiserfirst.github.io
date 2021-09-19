@@ -1,7 +1,8 @@
 ---
 title: "Setup New Mac for Software Development"
 date: "2021-09-07 11:35:00 +1000"
-tags: Apple Mac macOS
+last_modified_at: 2021-09-18 12:50:00 +1000
+tags: Apple Mac macos
 header:
   image: /assets/images/2021-09-07/macbook_1440_400.jpg
   image_description: "Macbook on desk"
