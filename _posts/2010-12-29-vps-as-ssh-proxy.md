@@ -1,7 +1,7 @@
 ---
 title: "使用VPS做SSH代理"
 date: "2010-12-29 10:00:00 +0800"
-last_modified_at: 2021-05-21 18:10:00 +1000
+last_modified_at: 2021-09-28 12:45:00 +1000
 tags: Chinese vps ssh proxy
 header:
   image: /assets/images/2021-05-21/nasa_earch_1280_400.jpg
@@ -38,17 +38,16 @@ userdel username
 
 密码设好以后，Server配置就完成了，接下来做Client配置。在Windows下可以使用Bitvise
 Tunnelier(2020-07-27注：已更名为Bitvise SSH Client)，点[这里下载][bitvise
-download]，其配置实用参考了[这篇文章][ssh config]。
+download]，~~其配置实用参考了这篇文章~~(2021-09-28注：文章链接已失效)。
 
 下载安装Tunnelier软件后，首先在Login页面中输入VPS地址及其SSH端口，以及刚刚设置的用户名和密码。在Options页面的On
 Login下取消选中Open Terminal和Open
 SFTP，这样使用这个帐户登录时就不会自动打开Terminal和SFTP窗口。其实这里即使不取消也是登录不上去的，因为这个帐户权限不够。最后在Service页面选中SOCKS/HTTP
 Proxy Forwarding下面的Enable，并在Listen
-Port中设置一个你想使用的端口号，如4567。这样本地代理的配置就完成了。
+Port中设置一个你想使用的端口号，如`4567`。这样本地代理的配置就完成了。
 
-想要通过这个代理上网只需要在浏览器中，设置代理地址为`127.0.0.1:4567`即可。当然如果你使用Firefox并且安装了Autoproxy插件，还可以根据网址无缝切换翻墙与否，十分方便。只需在Autoproxy插件的配置中将SSH
--D方式后面的端口号改为4567，并选择使用SSH -D即可。关于详细的设置请自行Google之。
+想要通过这个代理上网只需要在浏览器中，设置代理地址为`127.0.0.1:4567`即可。当然如果你使用Firefox并且安装了Autoproxy插件，还可以根据网址无缝切换翻墙与否，十分方便。只需在Autoproxy插件的配置中将`SSH
+-D`方式后面的端口号改为`4567`，并选择使用`SSH -D`即可。关于详细的设置请自行Google之。
 
 [ssh proxy on vps]: http://www.zhukun.net/archives/4504
 [bitvise download]: https://dl.bitvise.com/BvSshClient-Inst.exe
-[ssh config]: http://www.vpsmm.com/edu/ssh-sockt-5-fuck-g-f-w.html
