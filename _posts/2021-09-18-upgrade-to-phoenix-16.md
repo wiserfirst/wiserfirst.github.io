@@ -1,6 +1,7 @@
 ---
 title: "Journey of upgrading an app to Phoenix 1.6"
 date: "2021-09-19 12:25:00 +1000"
+last_modified_at: 2021-09-28 12:05:00 +1000
 tags: elixir esbuild phoenix webpack
 header:
   image: /assets/images/2021-09-19/elixir_code_1440_420.jpg
@@ -19,6 +20,10 @@ that we no longer need Node for asset building.
 True that it's just the first release candidate, but we are still one step
 closer to the formal release.
 
+> **Update (28 September 2021):**
+> [Phoenix 1.6.0][phx1.6.0] was released three days ago on 25 September, so now
+> we do have our formal release
+
 Last week, I managed to upgrade my little side project [Rubik's Cube Algorithms
 Trainer][cube trainer] to Phoenix 1.6 and I'll share my journey in this post.
 For the most part, I was following the [Phoenix 1.5.x to 1.6 upgrade
@@ -35,7 +40,7 @@ First we need to update the dependencies in the `mix.exs` file:
 ```elixir
 def deps do
   [
-    {:phoenix, "~> 1.6.0-rc.0", override: true},
+    {:phoenix, "~> 1.6.0"},
     {:phoenix_html, "~> 3.0"},
     {:phoenix_live_view, "~> 0.16.0"},
     {:phoenix_live_dashboard, "~> 0.5"},
@@ -50,8 +55,9 @@ Then run `mix deps.get` to install the new dependencies.
 
 Two thing to note here:
 
-* For `phoenix`, the `override: true` option is important, because Phoenix 1.6
-  is still in RC
+* ~~For `phoenix`, the `override: true` option is important, because Phoenix 1.6
+  is still in RC~~ (This is no longer the case, since Phoenix 1.6.0 has been
+  released)
 * If you want to use the new `HEEx` templates, add `phoenix_live_view` even if you
   don't actually use live view
 
@@ -355,5 +361,6 @@ ideas.
 [jose answer]: https://www.reddit.com/r/elixir/comments/p9t68v/with_the_new_esbuild_transition_what_do_you_use/ha0cskv?context=3
 [phx 16 release note]: https://www.phoenixframework.org/blog/phoenix-1.6-released
 [phx 16 upgrade guide]: https://gist.github.com/chrismccord/2ab350f154235ad4a4d0f4de6decba7b
+[phx1.6.0]: https://github.com/phoenixframework/phoenix/releases/tag/v1.6.0
 [talk recording]: https://www.youtube.com/watch?v=NR_Jk3yUEqc
 [phx tailwind guide]: https://gist.github.com/felix-starman/e038696c9c30d6596210980ce7de56c8
