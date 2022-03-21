@@ -8,7 +8,9 @@ header:
   teaser: /assets/images/2022-03-21/australia_nature_1440_420.jpg
   overlay_image: /assets/images/2022-03-21/australia_nature_1440_420.jpg
   overlay_filter: 0.3
-  caption: Elixir
+  caption: >
+    Image by [Dylan Shaw](https://unsplash.com/@dylanshaw?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
+    from [Unsplash](https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
 excerpt: Some random thoughts about Elixir Macros
 ---
 
