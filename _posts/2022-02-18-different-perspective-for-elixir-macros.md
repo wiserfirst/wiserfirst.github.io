@@ -4,7 +4,7 @@ date: "2022-03-21 11:48:00 +1100"
 tags: elixir macro tiny-tips
 header:
   image: /assets/images/2022-03-21/australia_nature_1440_420.jpg
-  image_description: ""
+  image_description: "Australian Outback"
   teaser: /assets/images/2022-03-21/australia_nature_1440_420.jpg
   overlay_image: /assets/images/2022-03-21/australia_nature_1440_420.jpg
   overlay_filter: 0.3
