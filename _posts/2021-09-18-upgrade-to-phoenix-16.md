@@ -359,7 +359,7 @@ ideas.
 [elixir sydney sept 2021]: https://www.meetup.com/elixir-sydney/events/gztkjsyccmbtb/
 [gigalixir guide]: https://hexdocs.pm/phoenix/1.6.0-rc.0/gigalixir.html
 [jose answer]: https://www.reddit.com/r/elixir/comments/p9t68v/with_the_new_esbuild_transition_what_do_you_use/ha0cskv?context=3
-[phx 16 release note]: https://www.phoenixframework.org/blog/phoenix-1.6-released
+[phx 16 release note]: https://www.phoenixframework.org/
 [phx 16 upgrade guide]: https://gist.github.com/chrismccord/2ab350f154235ad4a4d0f4de6decba7b
 [phx1.6.0]: https://github.com/phoenixframework/phoenix/releases/tag/v1.6.0
 [talk recording]: https://www.youtube.com/watch?v=NR_Jk3yUEqc

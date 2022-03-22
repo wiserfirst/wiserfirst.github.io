@@ -10,7 +10,7 @@ header:
   overlay_image: /assets/images/2021-05-15/coding_1440_400.jpg
   overlay_filter: 0.2
   caption: >
-    Image by [Reza Namdari](https://unsplash.com/@rezanamdari?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
+    Image by Reza Namdari
     from [Unsplash](https://unsplash.com/s/photos/programming?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
 excerpt: Discover a fantastic version manager for programming languages
 ---
