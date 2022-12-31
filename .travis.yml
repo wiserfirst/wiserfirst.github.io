@@ -21,7 +21,7 @@ env:
     # have any that I've created in any pages that I control.
     # Also for some reason, the following sites do not work reliably with
     # htmlproofer, so ignoring them for now
-    - HTMLPROOFER_IGNORE_HREFS="/localhost/,#main,/help.medium.com/,/pixabay.com/,/www.allaboutsymbian.com/,/iteye.com\/blog/,/www.williamlong.info/,/mademistakes.com/"
+    - HTMLPROOFER_IGNORE_HREFS="/localhost/,#main,/medium.com/,/docs.github.com/,/gnu.org/,/pixabay.com/,/www.allaboutsymbian.com/,/iteye.com\/blog/,/www.williamlong.info/,/mademistakes.com/"
 addons:
   apt:
     packages:
@@ -57,12 +57,12 @@ jobs:
         # forward
         - >
           bundle exec htmlproofer _site
+          --no-enforce-https
+          --no-check-external-hash
           --allow-hash-href
-          --assume-extension
-          --url-ignore $HTMLPROOFER_IGNORE_HREFS
-          --http-status-ignore "999"
-          --typhoeus-config '{"ssl_verifypeer": false, "ssl_verifyhost": 0}'
-          # --disable-external
+          --ignore-urls $HTMLPROOFER_IGNORE_HREFS
+          --ignore-status-codes "999"
+          --typhoeus '{"ssl_verifypeer": false, "ssl_verifyhost": 0}'
       deploy:
         local_dir: "./_site"
         provider: "pages:git"

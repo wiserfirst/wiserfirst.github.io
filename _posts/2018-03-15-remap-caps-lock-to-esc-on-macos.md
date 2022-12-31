@@ -10,7 +10,7 @@ header:
   overlay_image: /assets/images/2021-05-19/macbook_keyboard_1440_400.jpg
   overlay_filter: 0.4
   caption: >
-    Image by [Safar Safarov](https://unsplash.com/@codestorm)
+    Image by [Safar Safarov](https://unsplash.com/@safarslife)
     from [Unsplash](https://unsplash.com/photos/MSN8TFhJ0is)
 excerpt: One small change to make a happy Vim user
 ---

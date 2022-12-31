@@ -207,8 +207,8 @@ Anyway, please feel free to take what you need and let me know what you think
 :slightly_smiling_face:
 
 [bundle manpage]: https://docs.brew.sh/Manpage#bundle-subcommand
-[Github add SSH key docs]: https://docs.github.com/en/github/authenticating-to-github/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account
-[Github generate SSH key docs]: https://help.github.com/en/github/authenticating-to-github/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent
+[Github add SSH key docs]: https://docs.github.com/en/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account
+[Github generate SSH key docs]: https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent
 [Homebrew Bundle]: https://github.com/Homebrew/homebrew-bundle
 [Homebrew Installation guide]: https://docs.brew.sh/Installation
 [How to Use asdf Version Manager on macOS]: /blog/how-to-use-asdf-on-macos/

@@ -10,7 +10,7 @@ header:
   overlay_image: /assets/images/2021-05-21/colosseum_1280_400.jpg
   overlay_filter: 0.2
   caption: >
-    Image by [Neela Jalilian](https://unsplash.com/@neelaj)
+    Image by [Neela Jalilian](https://unsplash.com/@neelajalilian)
     from [Unsplash](https://unsplash.com/photos/l6tG8eURLYY)
 excerpt: Prevent an annoying behaviour that happens automatically on Mac
 ---

@@ -349,11 +349,6 @@ In this post, I walked through how I upgraded my humble little Phoenix app to
 Phoenix 1.6 do have other new features that are not covered in this post. For
 those, make sure to check out the [release note][phx 16 release note].
 
-If you have a more complex workflow around building CSS, you might want to check
-out [this guide][phx tailwind guide], which uses esbuild, postcss, tailwind and
-etc. It might not be exactly what you need, but it should offer you some good
-ideas.
-
 [Chris McCord]: https://twitter.com/chris_mccord
 [cube trainer]: https://github.com/wiserfirst/rubiks_cube_algs_trainer
 [elixir sydney sept 2021]: https://www.meetup.com/elixir-sydney/events/gztkjsyccmbtb/
@@ -363,4 +358,3 @@ ideas.
 [phx 16 upgrade guide]: https://gist.github.com/chrismccord/2ab350f154235ad4a4d0f4de6decba7b
 [phx1.6.0]: https://github.com/phoenixframework/phoenix/releases/tag/v1.6.0
 [talk recording]: https://www.youtube.com/watch?v=NR_Jk3yUEqc
-[phx tailwind guide]: https://gist.github.com/felix-starman/e038696c9c30d6596210980ce7de56c8

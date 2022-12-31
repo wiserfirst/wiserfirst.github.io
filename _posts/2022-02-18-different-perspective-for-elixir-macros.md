@@ -182,7 +182,7 @@ great blog post series [Understanding Elixir Macros][understanding-macros] and
 [Chris Mccord][chris-mccord]'s book [Metaprogramming Elixir][meta-elixir].
 
 [chris-mccord]: https://twitter.com/chris_mccord
-[gnu-cpp]: https://gcc.gnu.org/onlinedocs/cpp/Macros.html#Macros
+[gnu-cpp]: https://gcc.gnu.org/onlinedocs/cpp/Macros.html
 [meta-elixir]: https://pragprog.com/titles/cmelixir/metaprogramming-elixir/
 [quote-unquote]: https://elixir-lang.org/getting-started/meta/quote-and-unquote.html
 [sasa]: https://twitter.com/sasajuric

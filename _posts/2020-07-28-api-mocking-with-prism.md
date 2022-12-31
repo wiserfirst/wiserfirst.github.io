@@ -148,8 +148,8 @@ endpoints by editing the specification file. Since Postman can import an OpenAPI
 specification file into a Postman collection, sending sample requests to the
 mock server is super easy as well.
 
-[OpenAPI]: http://spec.openapis.org/oas/v3.0.3
-[Responses Object Example]: http://spec.openapis.org/oas/v3.0.3#responses-object-example
+[OpenAPI]: https://spec.openapis.org/oas/v3.0.3
+[Responses Object Example]: https://spec.openapis.org/oas/v3.0.3#responses-object-example
 [Postman]: https://www.postman.com/downloads/
 [Prism]: https://meta.stoplight.io/docs/prism/README.md
 [specification file]: https://raw.githubusercontent.com/api-evangelist/swagger/master/dev-api-openapi.json

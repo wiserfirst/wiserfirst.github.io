@@ -19,7 +19,7 @@ According to its official documentation,
 > The Pi-hole® is a DNS sinkhole that protects your devices from unwanted
 > content, without installing any client-side software.
 
-Pi-hole is a great piece of software if you are interested in a bit more privacy
+[Pi-hole] is a great piece of software if you are interested in a bit more privacy
 and saving some bandwidth at the same time.
 
 As its name suggests, it can obviously be installed on a Raspberry Pi, but apart
@@ -273,6 +273,6 @@ future self. But if someone else finds it helpful too, I'd be very glad
 [locale-post]: https://www.jaredwolff.com/raspberry-pi-setting-your-locale/
 [official os]: https://docs.pi-hole.net/main/prerequisites/#supported-operating-systems
 [os-download]: https://www.raspberrypi.com/software/operating-systems/
-[pi-hole]: https://pi-hole.net/
+[Pi-hole]: https://pi-hole.net/
 [pi-imager]: https://www.raspberrypi.com/software/
 [pi-zero]: https://www.raspberrypi.com/products/raspberry-pi-zero/
