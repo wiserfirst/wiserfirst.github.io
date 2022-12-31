@@ -5,7 +5,7 @@ dist: bionic
 language: ruby
 cache: bundler
 rvm:
-  - 2.7.2
+  - 3.1.2
 bundler_args: --without development
 before_install:
   - nvm install 14.16.0
