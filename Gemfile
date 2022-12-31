@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 source 'https://rubygems.org'
-ruby '2.7.2'
+ruby '3.1.2'
 # Hello! This is where you manage which Jekyll version is used to run.
 # When you want to use a different version, change it below, save the
 # file and run `bundle install`. Run Jekyll with `bundle exec`, like so:
@@ -20,7 +20,7 @@ end
 
 group :development, :test do
   # Test your rendered HTML files to make sure they're accurate
-  gem 'html-proofer', '~> 3.15'
+  gem 'html-proofer', '~> 5.0.1'
 end
 
 # the theme
