@@ -1,0 +1,76 @@
+name: Build and Deploy to Netlify
+on:
+  push:
+    branches:
+      - develop
+
+jobs:
+  build_and_deploy:
+    runs-on: ubuntu-latest
+
+    env:
+      # speeds up installation of htmlproofer
+      NOKOGIRI_USE_SYSTEM_LIBRARIES: true
+      # NOTE: The minimal-mistakes-generated 404 page seems to have a #main
+      # hash href to nowhere, so ignore all #main hash links for now; I don't
+      # have any that I've created in any pages that I control.
+      HTMLPROOFER_IGNORE_HREFS: '/localhost/,#main,/medium.com/,/docs.github.com/,/gnu.org/,/pixabay.com/,/www.allaboutsymbian.com/,/iteye.com/blog/,/www.williamlong.info/,/mademistakes.com/'
+
+    steps:
+      - name: Clone repository
+        uses: actions/checkout@v3
+
+      - name: Set up Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: 3.1.2
+          bundler-cache: true
+
+      - name: Set up Node JS
+        uses: actions/setup-node@v3
+        with:
+          node-version: 16
+
+      - name: Install Global npm packages
+        run: npm install --global sass-lint markdownlint-cli
+
+      - name: Build Jekyll site
+        run: JEKYLL_ENV=production bundle exec jekyll build
+
+      - name: Run markdownlint
+        run: markdownlint _posts _drafts _pages README.md
+
+        # Explanations for flags:
+        # --allow-hash-href - Build will fail on the first and last post entries
+        # if this isn't allowed since there will be previous and next buttons
+        # that have 'links to nowhere'.
+        # --assume-extension - Jekyll 3 supports extensionless URLs, and
+        # the blog uses them, so this flag needs to be here to prevent errors.
+        # --url-ignore "/localhost/" - Posts have explicit references to
+        # localhost, so don't consider them proper external links that need to
+        # go anywhere.
+        # --http-status-ignore "999" - LinkedIn doesn't seem to like crawlers,
+        # and hence sends back 999 errors, even if the link is valid.
+        # --disable-external - Only use this if the build fails unreasonably on
+        # external links
+        # NOTE: If a new post is created or new tags are introduced via a post,
+        # htmlproofer will need to be disabled for a build in order to proceed
+        # forward
+      - name: Run htmlproofer
+        run: >
+          bundle exec htmlproofer _site
+          --no-enforce-https
+          --no-check-external-hash
+          --allow-hash-href
+          --ignore-urls $HTMLPROOFER_IGNORE_HREFS
+          --ignore-status-codes "999"
+          --typhoeus '{"ssl_verifypeer": false, "ssl_verifyhost": 0}'
+
+      - name: Deploy to Netlify
+        if: success()
+        uses: netlify/actions/cli@master
+        env:
+          NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
+          NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
+        with:
+          args: deploy --prod --dir _site
