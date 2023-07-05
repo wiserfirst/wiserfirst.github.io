@@ -1,7 +1,7 @@
 ---
 title: "Better Tooling for Development with Elixir"
 date: "2019-08-03 10:00:00 +1000"
-last_modified_at: 2021-05-19 11:15:00 +1000
+last_modified_at: 2023-07-05 22:15:00 +1000
 tags: elixir credo git_hooks
 header:
   image: /assets/images/2021-05-19/elixir_1440_400.jpg
@@ -240,5 +240,5 @@ which made this article much better.
 [credo]: https://github.com/rrrene/credo
 [explainshell.com]: https://explainshell.com/explain?cmd=set+-euxo+pipefail
 [mix aliases]: https://hexdocs.pm/mix/Mix.html#module-aliases
-[mix format documentation]: https://hexdocs.pm/mix/master/Mix.Tasks.Format.html
+[mix format documentation]: https://hexdocs.pm/mix/1.6.0/Mix.Tasks.Format.html
 [this StackOverflow answer]: https://stackoverflow.com/a/17557522/1228752
