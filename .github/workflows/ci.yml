@@ -14,7 +14,7 @@ jobs:
       # NOTE: The minimal-mistakes-generated 404 page seems to have a #main
       # hash href to nowhere, so ignore all #main hash links for now; I don't
       # have any that I've created in any pages that I control.
-      HTMLPROOFER_IGNORE_HREFS: '/localhost/,#main,/medium.com/,/docs.github.com/,/gnu.org/,/pixabay.com/,/www.allaboutsymbian.com/,/iteye.com/blog/,/www.williamlong.info/,/mademistakes.com/'
+      HTMLPROOFER_IGNORE_HREFS: '/localhost/,#main,/medium.com/,/twitter.com/,/docs.github.com/,/gnu.org/,/pixabay.com/,/www.allaboutsymbian.com/,/iteye.com/blog/,/www.williamlong.info/,/mademistakes.com/'
 
     steps:
       - name: Clone repository
