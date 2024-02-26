@@ -1,7 +1,7 @@
 ---
 title: "Converting mov/avi to mp4 with ffmpeg"
 date: 2021-04-02 11:50:00 +1000
-last_modified_at: 2021-05-16 17:40:00 +1000
+last_modified_at: 2024-02-26 17:40:00 +1100
 tags: ffmpeg mov avi mp4
 header:
   image: /assets/images/2021-05-16/hobbit_1440_420.jpg
@@ -53,12 +53,13 @@ as well.
 
 ```ruby
 #!/usr/bin/env ruby
+require 'shellwords'
 
 def usage
   puts <<~HEREDOC
     Usage:
     ./video-converter.rb [dir]
-    to convert mov/avi files to mp4 with H.264 video codec and AAC audio codec"
+    to convert mov/avi files to mp4 with H.264 video codec and AAC audio codec
   HEREDOC
 end
 
@@ -74,13 +75,25 @@ unless Dir.exist?(dir)
   exit 1
 end
 
+output_dir = File.join(dir, 'output')
+
 Dir.chdir(dir)
-Dir.glob('*.{avi,mov}') do |filename|
-  basename = filename.split('.')[0]
-  puts "\n\e[32mConverting #{filename} to #{basename}.mp4\e[0m"
-  system("ffmpeg -i #{filename} -vcodec h264 #{basename}.mp4")
+Dir.mkdir(output_dir) unless Dir.exist?(output_dir)
+
+Dir.glob('*.{avi,mov,mp4}') do |original_filename|
+  basename = File.basename(original_filename, '.*')
+  filename = Shellwords.escape(original_filename)
+  output_path = File.join('output', "#{basename}.mp4") # Keep for display
+  escaped_output_path = Shellwords.escape(output_path) # Use for command
+  puts "\n\e[32mConverting #{original_filename} to #{output_path}\e[0m"
+  system("ffmpeg -i #{filename} -vcodec h264 -acodec aac #{escaped_output_path}")
 end
 ```
+
+Note: Script updated on 2024-02-26 to: a) create an output directory if it does
+not already exist, b) escape special characters (such as spaces) for shell
+commands, and c) add support for converting .mp4 files in addition to .mov and
+.avi files.
 
 I understand there are various ways to improve this script to make it more
 flexible/robust, but for now this is good enough for my purpose and hopefully
