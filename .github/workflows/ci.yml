@@ -56,15 +56,15 @@ jobs:
         # NOTE: If a new post is created or new tags are introduced via a post,
         # htmlproofer will need to be disabled for a build in order to proceed
         # forward
-      - name: Run htmlproofer
-        run: >
-          bundle exec htmlproofer _site
-          --no-enforce-https
-          --no-check-external-hash
-          --allow-hash-href
-          --ignore-urls $HTMLPROOFER_IGNORE_HREFS
-          --ignore-status-codes "999"
-          --typhoeus '{"ssl_verifypeer": false, "ssl_verifyhost": 0}'
+        # - name: Run htmlproofer
+        #   run: >
+        #     bundle exec htmlproofer _site
+        #     --no-enforce-https
+        #     --no-check-external-hash
+        #     --allow-hash-href
+        #     --ignore-urls $HTMLPROOFER_IGNORE_HREFS
+        #     --ignore-status-codes "999"
+        #     --typhoeus '{"ssl_verifypeer": false, "ssl_verifyhost": 0}'
 
       - name: Deploy to Netlify
         if: success()
