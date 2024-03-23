@@ -26,7 +26,6 @@ asdf plugin add nodejs
 asdf install
 ```
 
-
 ### Development Dependencies
 
 This app uses the following dependencies during development:
