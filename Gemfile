@@ -11,18 +11,6 @@ ruby '3.1.2'
 # This will help ensure the proper Jekyll version is running.
 gem 'jekyll', '~> 4.0'
 
-group :development do
-  # Command line tool to easily handle events on file system modifications
-  gem 'guard', '~> 2.16'
-  # Guard extension to run cli processes
-  gem 'guard-process', '~> 1.2'
-end
-
-group :development, :test do
-  # Test your rendered HTML files to make sure they're accurate
-  gem 'html-proofer', '~> 5.0.1'
-end
-
 # the theme
 # If you have any plugins, put them here!
 group :jekyll_plugins do
