@@ -11,10 +11,6 @@ jobs:
     env:
       # speeds up installation of htmlproofer
       NOKOGIRI_USE_SYSTEM_LIBRARIES: true
-      # NOTE: The minimal-mistakes-generated 404 page seems to have a #main
-      # hash href to nowhere, so ignore all #main hash links for now; I don't
-      # have any that I've created in any pages that I control.
-      HTMLPROOFER_IGNORE_HREFS: '/localhost/,#main,/medium.com/,/twitter.com/,/docs.github.com/,/gnu.org/,/pixabay.com/,/www.allaboutsymbian.com/,/iteye.com/blog/,/www.williamlong.info/,/mademistakes.com/'
 
     steps:
       - name: Clone repository
@@ -39,32 +35,6 @@ jobs:
 
       - name: Run markdownlint
         run: markdownlint _posts _drafts _pages README.md
-
-        # Explanations for flags:
-        # --allow-hash-href - Build will fail on the first and last post entries
-        # if this isn't allowed since there will be previous and next buttons
-        # that have 'links to nowhere'.
-        # --assume-extension - Jekyll 3 supports extensionless URLs, and
-        # the blog uses them, so this flag needs to be here to prevent errors.
-        # --url-ignore "/localhost/" - Posts have explicit references to
-        # localhost, so don't consider them proper external links that need to
-        # go anywhere.
-        # --http-status-ignore "999" - LinkedIn doesn't seem to like crawlers,
-        # and hence sends back 999 errors, even if the link is valid.
-        # --disable-external - Only use this if the build fails unreasonably on
-        # external links
-        # NOTE: If a new post is created or new tags are introduced via a post,
-        # htmlproofer will need to be disabled for a build in order to proceed
-        # forward
-        # - name: Run htmlproofer
-        #   run: >
-        #     bundle exec htmlproofer _site
-        #     --no-enforce-https
-        #     --no-check-external-hash
-        #     --allow-hash-href
-        #     --ignore-urls $HTMLPROOFER_IGNORE_HREFS
-        #     --ignore-status-codes "999"
-        #     --typhoeus '{"ssl_verifypeer": false, "ssl_verifyhost": 0}'
 
       - name: Deploy to Netlify
         if: success()
