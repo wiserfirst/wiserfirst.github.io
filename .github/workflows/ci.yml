@@ -9,12 +9,16 @@ jobs:
     runs-on: ubuntu-latest
 
     env:
-      # speeds up installation of htmlproofer
       NOKOGIRI_USE_SYSTEM_LIBRARIES: true
 
     steps:
       - name: Clone repository
         uses: actions/checkout@v4
+
+      - name: Install system dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y libxml2-dev libxslt-dev
 
       - name: Set up Ruby
         uses: ruby/setup-ruby@v1
@@ -25,10 +29,10 @@ jobs:
       - name: Set up Node JS
         uses: actions/setup-node@v4
         with:
-          node-version: 20
+          node-version: 22
 
       - name: Install Global npm packages
-        run: npm install --global sass-lint markdownlint-cli
+        run: npm install --global markdownlint-cli
 
       - name: Build Jekyll site
         run: JEKYLL_ENV=production bundle exec jekyll build
