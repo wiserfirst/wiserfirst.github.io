@@ -46,7 +46,7 @@ version of OTP was indeed the guilty party.
 Since I'm not an expert on certificate validation in Erlang, the error message
 we got when making requests to the bank looks cryptic:
 
-```
+```text
 TLS :client: In state :wait_cert_cr at ssl_handshake.erl:2123 generated CLIENT ALERT: Fatal - Unsupported Certificate
  - {:key_usage_mismatch,
  { {:Extension, {2, 5, 29, 15}, true, [:keyCertSign, :cRLSign]},
@@ -87,8 +87,10 @@ identity. Each certificate contains:
 Certificates have "extensions" that specify what they can be used for. Two
 important ones are:
 
-* Key Usage (KU): Broadly defines what the certificate's key can do (sign things, encrypt things, etc.)
-* Extended Key Usage (EKU): More specifically defines the certificate's purpose (web server authentication, email, etc.)
+* Key Usage (KU): Broadly defines what the certificate's key can do (sign
+things, encrypt things, etc.)
+* Extended Key Usage (EKU): More specifically defines the certificate's purpose
+(web server authentication, email, etc.)
 
 ## The Bug in OTP
 
@@ -97,8 +99,10 @@ actually specified in the certificate standards (RFC 5280).
 
 In simple terms:
 
-* The certificates from certain CAs like Entrust had a flag set indicating they could sign other certificates (keyCertSign)
-* They also had flags set saying they could be used for web server authentication
+* The certificates from certain CAs like Entrust had a flag set indicating they
+could sign other certificates (keyCertSign)
+* They also had flags set saying they could be used for web server
+authentication
 * OTP thought these two purposes were contradictory and rejected the certificate
 
 It's like if you're qualified as both a teacher and a restaurant chef, but then
@@ -118,9 +122,12 @@ fixed it.
 
 A few interesting lessons from this experience:
 
-1. Hidden Complexity: Even mature, well-tested software like Erlang/OTP can have subtle bugs in complex areas like SSL/TLS.
-2. Implementation vs. Specification: The bug wasn't a coding error but an overly strict interpretation of a technical standard.
-3. Community Matters: Thanks to the Erlang community for identifying and fixing this issue very quickly.
+1. Hidden Complexity: Even mature, well-tested software like Erlang/OTP can have
+subtle bugs in complex areas like SSL/TLS.
+2. Implementation vs. Specification: The bug wasn't a coding error but an overly
+strict interpretation of a technical standard.
+3. Community Matters: Thanks to the Erlang community for identifying and fixing
+this issue very quickly.
 
 ## Summary
 
