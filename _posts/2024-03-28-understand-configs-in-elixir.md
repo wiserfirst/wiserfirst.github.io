@@ -1,7 +1,7 @@
 ---
 title: "Understanding Application Configuration in Elixir"
 date: 2024-04-18 22:19:00 +1000
-tags: Elixir configuration distillery release
+tags: elixir configuration distillery release
 header:
   image: /assets/images/2024-04-19/banff_canada.jpg
   image_description: "Banff National Park"
