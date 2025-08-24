@@ -4,7 +4,7 @@ date: 2025-03-08 22:30:00 +1100
 tags: Erlang OTP
 header:
   image: /assets/images/2025-03-08/red_bug.jpg
-  image_description: "Banff National Park"
+  image_description: "Red bug on green leafed plant"
   teaser: /assets/images/2025-03-08/red_bug.jpg
   overlay_image: /assets/images/2025-03-08/red_bug.jpg
   overlay_filter: 0.4
