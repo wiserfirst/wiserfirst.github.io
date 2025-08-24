@@ -1,6 +1,7 @@
 ---
 title: "Setup Pi-hole on Raspberry Pi"
 date: "2021-10-18 11:45:00 +1100"
+last_modified_at: 2025-08-24 22:59:00 +1000
 tags: adblock debian pi-hole raspberry-pi
 header:
   image: /assets/images/2021-10-18/pi_zero_1440_420.jpg
@@ -68,8 +69,9 @@ Lastly, click `WRITE` to install the selected OS on your card.
 
 For most of the OS options, the imager will download the OS image while writing
 it to the micro SD card. If you have a slow Internet connect, you can also
-download the OS image separately from [here][os-download] and then choose `Use
-custom` for the OS option and select the downloaded `.img` file.
+download the OS image separately from [the Raspberry Pi OS download
+page][os-download] and then choose `Use custom` for the OS option and select the
+downloaded `.img` file.
 
 ### Advanced options for the imager
 
