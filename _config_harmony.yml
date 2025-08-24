@@ -1,4 +1,0 @@
-jekyll-minifier:
-  javascript:
-    uglifier:
-      harmony: true

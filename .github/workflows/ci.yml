@@ -35,7 +35,7 @@ jobs:
         run: npm install --global markdownlint-cli
 
       - name: Build Jekyll site
-        run: JEKYLL_ENV=production bundle exec jekyll build --config _config.yml,_config_harmony.yml
+        run: JEKYLL_ENV=production bundle exec jekyll build
 
       - name: Run markdownlint
         run: markdownlint _posts _drafts _pages README.md

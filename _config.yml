@@ -217,6 +217,10 @@ whitelist:
   - jekyll-minifier
   - jemoji
 
+# Jekyll Minifier Configuration
+jekyll-minifier:
+  uglifier_args:
+    harmony: true
 
 # Archives
 #  Type
