@@ -53,7 +53,7 @@ as some useful tips for using it.
 
 [Macbook Pro初体验](https://www.kenengba.com/post/2934.html)
 
-### Notes from July 2020
+## Notes from July 2020
 
 It's been almost ten years since this post was initially published and
 unfortunately many of the links in this post have stopped working, so I've

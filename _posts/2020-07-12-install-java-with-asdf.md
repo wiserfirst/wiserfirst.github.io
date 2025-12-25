@@ -29,7 +29,7 @@ instructions][] for macOS and Linux on their website should be handy. Once you
 have asdf, installing a version of Java, or most popular programming languages,
 should be reasonably painless.
 
-### Add the plugin
+## Add the plugin
 
 First add the plugin for Java:
 
@@ -37,7 +37,7 @@ First add the plugin for Java:
 asdf plugin-add java
 ```
 
-### List available versions
+## List available versions
 
 This could be helpful when you are not sure which versions are available and you
 can do that by:
@@ -54,7 +54,7 @@ Java 8/9/10, which is why there is the AdoptOpenJDK project. Since I'm not
 exactly an expert on Java, if you'd like to know more, my friend, Google is a
 good starting point.
 
-### Install a version
+## Install a version
 
 Once you pick which version you want, install it with:
 
@@ -65,7 +65,7 @@ asdf install java openjdk-14.0.1
 In the example above, I wanted the latest version of OpenJDK, which is `14.0.1`
 as of July 2020.
 
-### Select a global version
+## Select a global version
 
 After installing the first version, you might also want to select it as the
 global version for that language by:
@@ -74,7 +74,7 @@ global version for that language by:
 asdf global java openjdk-14.0.1
 ```
 
-### Set JAVA_HOME
+## Set JAVA_HOME
 
 To set `JAVA_HOME` environment variable for Zsh initialisation, add the
 following:
@@ -85,13 +85,13 @@ following:
 
 Refer to [asdf-java documentation][] for Bash or Fish shells.
 
-### Summary
+## Summary
 
 Hopefully this short introduction to installing Java with asdf could be helpful
 to someone else too. I use asdf to manage all my programming language
 installations (literally one tool to rule them all!) and I love it.
 
-### Update (May 2021)
+## Update (May 2021)
 
 If you like this short introduction to asdf, I've recently published a more
 complete guide to asdf [How to Use asdf Version Manager on macOS][], which you

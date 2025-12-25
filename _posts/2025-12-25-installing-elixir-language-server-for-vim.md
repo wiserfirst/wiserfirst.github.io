@@ -1,7 +1,7 @@
 ---
 title: "Installing Elixir Language Server for Vim"
 date: 2025-12-25 15:50:00 +1100
-tags: Elixir LSP Vim
+tags: elixir lsp vim
 header:
   image: /assets/images/2025-12-25/toolbox.jpg
   image_description: ""
