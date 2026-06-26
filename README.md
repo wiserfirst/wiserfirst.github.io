@@ -48,7 +48,7 @@ asdf reshim nodejs
 ### Start blog server
 
 ```sh
-bundle exec jekyll serve --incremental --drafts --livereload
+bundle exec jekyll serve --incremental --drafts --livereload --future --unpublished
 ```
 
 Then, navigate to <http://localhost:4000>
