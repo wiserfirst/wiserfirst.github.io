@@ -10,6 +10,7 @@ jobs:
 
     env:
       NOKOGIRI_USE_SYSTEM_LIBRARIES: true
+      JEKYLL_ENV: production
 
     steps:
       - name: Clone repository
@@ -35,7 +36,7 @@ jobs:
         run: npm install --global markdownlint-cli
 
       - name: Build Jekyll site
-        run: JEKYLL_ENV=production bundle exec jekyll build
+        run: bundle exec jekyll build
 
       - name: Run markdownlint
         run: markdownlint _posts _drafts _pages README.md
@@ -47,4 +48,4 @@ jobs:
           NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
           NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
         with:
-          args: deploy --prod --dir _site
+          args: deploy --prod --dir _site --no-build
