@@ -190,6 +190,7 @@ sass:
 
 
 # Outputting
+port: 4200
 permalink: /blog/:title/
 paginate: 10 # amount of posts to show
 paginate_path: /page:num/
