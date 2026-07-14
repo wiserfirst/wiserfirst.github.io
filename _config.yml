@@ -97,28 +97,49 @@ author:
   avatar           : "https://s.gravatar.com/avatar/f9dbde9c6042a54fde3da7ef83ef4bd9"
   bio              : "Developer ❤️ Functional Programming"
   location         : "Sydney, Australia"
-  email            : "wiserfirst@gmail.com"
-  uri              : "https://www.wiserfirst.com"
+  email            :
+  uri              :
   home             : "/"
+  # All sidebar links live here (instead of the individual fields
+  # below) so their order can be controlled.
+  links:
+    - label: "Website"
+      icon: "fas fa-fw fa-link"
+      url: "https://www.wiserfirst.com"
+    - label: "Email"
+      icon: "fas fa-fw fa-square-envelope"
+      url: "mailto:wiserfirst@gmail.com"
+    - label: "Twitter"
+      icon: "fab fa-fw fa-square-x-twitter"
+      url: "https://twitter.com/wiserfirst"
+    - label: "LinkedIn"
+      icon: "fab fa-fw fa-linkedin"
+      url: "https://www.linkedin.com/in/wiserfirst"
+    - label: "GitHub"
+      icon: "fab fa-fw fa-github"
+      url: "https://github.com/wiserfirst"
+    - label: "Keymaps"
+      icon: "fas fa-fw fa-keyboard"
+      url: "https://keymaps.wiserfirst.com/"
   bitbucket        :
   codepen          :
   dribbble         :
   flickr           :
   facebook         :
   foursquare       :
-  github           : "wiserfirst"
+  github           :
   gitlab           :
   google_plus      :
   keybase          :
   instagram        :
   lastfm           :
-  linkedin         : "wiserfirst"
+  linkedin         :
   pinterest        :
   soundcloud       :
   stackoverflow    :
   steam            :
   tumblr           :
-  twitter          : "wiserfirst"
+  twitter          :
   vine             :
   weibo            :
   xing             :
