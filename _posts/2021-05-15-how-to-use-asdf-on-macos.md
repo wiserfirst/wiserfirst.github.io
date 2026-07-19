@@ -1,7 +1,7 @@
 ---
 title: "How to Use asdf Version Manager on macOS"
 date: "2021-05-15 19:35:00 +1000"
-last_modified_at: 2021-09-05 17:30:00 +1000
+last_modified_at: 2026-07-19 23:30:00 +1000
 tags: asdf version-manager macos ruby nodejs python
 header:
   image: /assets/images/2021-05-15/coding_1440_400.jpg
@@ -11,9 +11,17 @@ header:
   overlay_filter: 0.2
   caption: >
     Image by Reza Namdari
-    from [Unsplash](https://unsplash.com/s/photos/programming?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
+    from [Unsplash](https://unsplash.com/s/photos/programming)
 excerpt: Discover a fantastic version manager for programming languages
 ---
+
+<div class="notice--warning" markdown="1">
+**Update, July 2026:** asdf has since been rewritten in Go, and most commands
+in this guide no longer exist: `asdf global`, `asdf local` and `asdf shell`
+are all gone. This guide is kept for historical reference; for current
+instructions, read the new
+[How to Use asdf Version Manager on macOS (2026 Update)](/blog/how-to-use-asdf-on-macos-2026-update/).
+</div>
 
 Last year, I wrote a post titled [Install Java with asdf][] and slightly
 surprising to me, it ended up becoming the most visited article on my personal

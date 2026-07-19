@@ -1,7 +1,7 @@
 ---
 title: "Setup New Mac for Software Development"
 date: "2021-09-07 11:35:00 +1000"
-last_modified_at: 2026-07-09 17:48:00 +1000
+last_modified_at: 2026-07-19 23:30:00 +1000
 tags: Apple Mac macos
 header:
   image: /assets/images/2021-09-07/macbook_1440_400.jpg
@@ -197,7 +197,7 @@ Obviously you could install whatever programming languages you need, be that
 Ruby, Node.js, Python or something else.
 
 For more details on how to do that with asdf, check out my comprehensive guide:
-[How to Use asdf Version Manager on macOS].
+[How to Use asdf Version Manager on macOS (2026 Update)][asdf post].
 
 ## Step 6: Install prezto
 
@@ -423,4 +423,4 @@ Anyway, please feel free to take what you need and let me know what you think
 [Hammerspoon]: https://www.hammerspoon.org
 [Karabiner-Elements]: https://karabiner-elements.pqrs.org
 [asdf]: https://asdf-vm.com/
-[How to Use asdf Version Manager on macOS]: /blog/how-to-use-asdf-on-macos/
+[asdf post]: /blog/how-to-use-asdf-on-macos-2026-update/
